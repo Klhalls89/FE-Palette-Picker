@@ -17,6 +17,23 @@ class App extends Component {
             <p>#FD3754</p>
             <i className="fas fa-lock"></i>
           </div>
+          <div className="color-2">
+            <p>#FB1754</p>
+            <i className="fas fa-lock"></i>
+          </div>
+          <div className="color-3">
+            <p>#0B1754</p>
+            <i className="fas fa-lock"></i>
+          </div>
+          <div className="color-4">
+            <p>#0B1B54</p>
+            <i className="fas fa-lock"></i>
+          </div>
+          <div className="color-5">
+            <p>#FB1B33</p>
+            <i className="fas fa-lock"></i>
+          </div>
+
         </section>
       </div>
     )
