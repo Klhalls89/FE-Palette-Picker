@@ -33,7 +33,6 @@ class App extends Component {
             <p>#FB1B33</p>
             <i className="fas fa-lock"></i>
           </div>
-
         </section>
       </div>
     )
