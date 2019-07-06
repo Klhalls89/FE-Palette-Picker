@@ -8,7 +8,7 @@ An exciting new app that generate colors and allows you to customize palettes fo
 
 ## Wireframe
 
-<img width="589" alt="Screen Shot 2019-07-04 at 4 59 14 PM" src="https://user-images.githubusercontent.com/41968928/60738192-b075ff80-9f1a-11e9-8ab4-0dc08429c297.png">
+<img width="509" alt="Screen Shot 2019-07-05 at 8 04 29 PM" src="https://user-images.githubusercontent.com/41968928/60750050-3c5e4a80-9f60-11e9-876a-690cc915e85a.png">
 
 ## The Product 
 
