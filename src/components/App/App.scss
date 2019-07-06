@@ -4,9 +4,44 @@
 
 .App {
   text-align: center;
+  font-family: $main-font;
 }
 
 .logo {
   font-family: $accent-font;
   font-size: 50px;
 }
+
+.main-colors {
+  display: flex;
+  justify-content: space-between;
+  margin: 1%;
+
+  div {
+    background-color: hotpink;
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    justify-content: flex-end;
+    margin: .5%;
+    padding: 1%;
+    width: 300px;
+  }
+}
+.saved-portion {
+  display: flex;
+  flex-direction: column;
+
+  .project-area {
+  display: flex;
+
+  div {
+    background-color: pink;
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+  }
+}
+
+}
+
