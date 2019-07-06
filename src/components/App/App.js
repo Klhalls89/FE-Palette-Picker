@@ -34,6 +34,15 @@ class App extends Component {
             <i className="fas fa-lock"></i>
           </div>
         </section>
+        <button className="gen-colors">Generate Colors</button>
+        <form className="color-form">
+          <select>
+            <option>project 1</option>
+            <option>project 2</option>
+          </select>
+          <input type="text"/>
+          <button className="save-pal">Save Palette</button>
+        </form>
       </div>
     )
   }
