@@ -8,7 +8,30 @@ class App extends Component {
     }
   }
 
+  componentDidMount(){
+    this.genHex()
+  }
+
+  makeFiveColors = () => {
+    let newColors = []
+    for (let i = 0; i < 5; i++) {
+      let color = this.genHex()
+      newColors.push(color)
+    }
+    this.setState({colors: newColors})
+  }
+  genHex = () => {
+    let hexables = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F' ];
+    let shuffledHexables = hexables.sort(() => Math.random() - 0.5)
+    let newColor = shuffledHexables.reduce((finalColor, hexable) => {
+        finalColor += hexable
+        return finalColor.slice(0, 6);
+    }, '')
+    return `# ${newColor}`;
+  }
+
   render() {
+    console.log(this.state.colors)
     return (
       <div className="App">
         <h1 className="logo">Palette Picker</h1>
@@ -43,21 +66,6 @@ class App extends Component {
           <input type="text"/>
           <button className="save-pal">Save Palette</button>
         </form>
-        <form className="project-form">
-          <input type="text"/>
-          <button>Project Name</button>
-        </form>
-        <section className="saved-portion">
-          <article className="project-area">
-            <h2>project name</h2>
-            <h3>palette name</h3>
-            <div className="saved-color1"></div>
-            <div className="saved-color2"></div>
-            <div className="saved-color3"></div>
-            <div className="saved-color4"></div>
-            <div className="saved-color5"></div>
-          </article>
-        </section>
       </div>
     )
   }
