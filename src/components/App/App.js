@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import Projects from '../Projects/Projects'
 
 class App extends Component {
-  constructor(){
+  constructor() {
     super()
     this.state = {
       colors: []
@@ -67,6 +68,7 @@ class App extends Component {
           <input type="text"/>
           <button className="save-pal">Save Palette</button>
         </form>
+        <Projects />
       </div>
     )
   }

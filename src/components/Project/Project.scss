@@ -1,7 +1,3 @@
-.saved-portion {
-  display: flex;
-  flex-direction: column;
-
   .project-area {
     display: grid;
     grid-template-areas: "... proj "
@@ -39,4 +35,3 @@
       }
     }
   }
-}
