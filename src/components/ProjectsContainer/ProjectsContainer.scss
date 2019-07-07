@@ -1,0 +1,10 @@
+.projects {
+  border-top: 4px #C3C3C3 solid;
+}
+
+.saved-portion {
+  display: flex;
+  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2 1fr);
+}

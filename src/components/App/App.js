@@ -1,19 +1,26 @@
 import React, { Component } from 'react';
-import Projects from '../Projects/Projects'
+import ProjectsContainer from '../ProjectsContainer/ProjectsContainer'
+import { fetchProjects } from '../fetch/fetch'
 
 class App extends Component {
   constructor() {
     super()
     this.state = {
-      colors: []
+      colors: [],
+      projects: []
     };
   };
 
   componentDidMount(){
-    this.makeFiveColors()
+    this.makeColors();
+    this.getProjects();
   };
 
-  makeFiveColors = () => {
+  getProjects = () => {
+    const projects = fetchProjects();
+  }
+
+  makeColors = () => {
     let colors = []
     for (let i = 0; i < 5; i++) {
       let color = this.genHex()
@@ -59,7 +66,7 @@ class App extends Component {
             <i className="fas fa-lock"></i>
           </div>
         </section>
-        <button onClick={() => this.makeFiveColors()} className="gen-colors">Generate Colors</button>
+        <button onClick={() => this.makeColors()} className="gen-colors">Generate Colors</button>
         <form className="color-form">
           <select>
             <option>project 1</option>
@@ -68,7 +75,7 @@ class App extends Component {
           <input type="text"/>
           <button className="save-pal">Save Palette</button>
         </form>
-        <Projects />
+        <ProjectsContainer />
       </div>
     )
   }
