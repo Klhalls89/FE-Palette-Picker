@@ -13,14 +13,22 @@ describe('App', () => {
   })
 
   describe('componentDidMount', () => {
-    it('should call makeColors', () => {
-      
+    it.skip('should call makeColors', () => {
+      const makeColors = jest.fn()
+      expect(makeColors).toHaveBeenCalledTimes(1)
+    })
+    it.skip('should call getProjects', () => {
+      let getProjects = jest.fn()
+      expect(getProjects).toHaveBeenCalledTimes(1)
     })
   })
 
   describe('makeColors', () => {
-    it('should call genHex the passed amount of times', () => {
-
+    it.skip('should call genHex the passed amount of times', () => {
+      //setup
+      const genHex = jest.fn()
+      wrapper.instance.makeColors()
+      expect(genHex).toHaveBeenCalled()
     })
   })
 
@@ -32,7 +40,7 @@ describe('App', () => {
 
   describe('render', () => {
     it('should match the snapshot', () => {
-      
+
     })
   })
 })
