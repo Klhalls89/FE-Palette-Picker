@@ -3,13 +3,40 @@
   flex-direction: column;
 
   .project-area {
-    display: flex;
+    display: grid;
+    grid-template-areas: "... proj "
+                          "pal colors";
+    .proj-name {
+      grid-area: proj;
+      text-align: left;
+      font-family: $accent-font;
+    } 
+    
+    .saved-palette-disp {
+      grid-area: pal;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-    div {
-      background-color: pink;
-      height: 50px;
-      width: 50px;
-      margin: 5px;
+      h3 {
+        font-family: $accent-font;
+      }
+
+      .fas {
+        margin: 5px;
+      }
+    }
+
+    .saved-colors {
+      grid-area: colors;
+      display: flex;
+
+      div {
+        background-color: pink;
+        height: 50px;
+        width: 50px;
+        margin: 5px;
+      }
     }
   }
 }
