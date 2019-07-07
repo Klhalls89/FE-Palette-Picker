@@ -34,6 +34,15 @@ input {
   height: 40px;
 }
 
+input {
+  border-radius: 1px;
+  border: solid #C3C3C3 1px;
+}
+
+select {
+  border: none;
+}
+
 button {
   background-color: #C3C3C3;
   width: 300px;
