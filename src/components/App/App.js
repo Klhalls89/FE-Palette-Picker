@@ -10,10 +10,10 @@ class App extends Component {
   };
 
   componentDidMount(){
-    this.makeFiveColors()
+    this.makeColors()
   };
 
-  makeFiveColors = () => {
+  makeColors = () => {
     let colors = []
     for (let i = 0; i < 5; i++) {
       let color = this.genHex()
@@ -59,7 +59,7 @@ class App extends Component {
             <i className="fas fa-lock"></i>
           </div>
         </section>
-        <button onClick={() => this.makeFiveColors()} className="gen-colors">Generate Colors</button>
+        <button onClick={() => this.makeColors()} className="gen-colors">Generate Colors</button>
         <form className="color-form">
           <select>
             <option>project 1</option>

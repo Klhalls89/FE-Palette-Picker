@@ -1,42 +1,10 @@
+.projects {
+  border-top: 4px #C3C3C3 solid;
+}
+
 .saved-portion {
   display: flex;
   flex-direction: column;
-
-  .project-area {
-    display: grid;
-    grid-template-areas: "... proj "
-                          "pal colors";
-    .proj-name {
-      grid-area: proj;
-      text-align: left;
-      font-family: $accent-font;
-    } 
-    
-    .saved-palette-disp {
-      grid-area: pal;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      h3 {
-        font-family: $accent-font;
-      }
-
-      .fas {
-        margin: 5px;
-      }
-    }
-
-    .saved-colors {
-      grid-area: colors;
-      display: flex;
-
-      div {
-        background-color: pink;
-        height: 50px;
-        width: 50px;
-        margin: 5px;
-      }
-    }
-  }
+  display: grid;
+  grid-template-columns: repeat(2 1fr);
 }
