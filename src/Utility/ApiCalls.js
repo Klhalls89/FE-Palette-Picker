@@ -4,5 +4,5 @@ export const fetchProjects = async () => {
   if (response.status == 200) {
     const body = await response.json()
     return body
-  } 
-}
+  }; 
+};
