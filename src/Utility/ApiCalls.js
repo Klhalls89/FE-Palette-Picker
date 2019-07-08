@@ -3,6 +3,8 @@ export const fetchProjects = async () => {
   const response = await fetch(url)
   if (response.status == 200) {
     const body = await response.json()
+    console.log('body',body)
     return body
   }; 
 };
+
