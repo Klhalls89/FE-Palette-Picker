@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ProjectsContainer from '../ProjectsContainer/ProjectsContainer'
-import { fetchProjects } from '../utils/fetch'
+import { fetchProjects } from '../../Utility/ApiCalls'
 
 class App extends Component {
   constructor() {
@@ -16,9 +16,9 @@ class App extends Component {
     this.getProjects();
   };
 
-  getProjects = () => {
-    const projects = fetchProjects();
-    console.log(projects)
+  getProjects = async () => {
+    const projects = await fetchProjects()
+    this.setState({projects})
   }
 
   makeColors = () => {
