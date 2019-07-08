@@ -7,9 +7,16 @@ class App extends Component {
     super()
     this.state = {
       colors: [],
-      projects: []
-    };
+      projects: [],
+      isColorLocked: {
+        position1: true,
+        position2: true,
+        position3: true,
+        position4: true,
+        position5: true
+      }
   };
+}
 
   componentDidMount(){
     this.makeColors();
@@ -39,31 +46,38 @@ class App extends Component {
     return `#${newColor}`;
   };
 
+  handleColor = (position) => {
+    const { isColorLocked } = this.state
+    const newLock = { ...isColorLocked }
+    newLock[`${position}`] = !newLock[`${position}`]
+    this.setState({isColorLocked : newLock})
+  }
+
   render() {
-    const {colors} = this.state
+    const {colors, isColorLocked} = this.state
+
     return (
       <div className="App">
         <h1 className="logo">Palette Picker</h1>
         <section className="main-colors">
           <div style={{backgroundColor: colors[0]}} className="color-1">
             <p>{colors[0]}</p>
-            <i className="fas fa-lock"></i>
+            <i className={`fas ${ isColorLocked.position1 ? 'fa-unlock' : 'fa-lock'}`} onClick={() => this.handleColor('position1')}></i>
           </div>
           <div style={{backgroundColor: colors[1]}} className="color-2">
             <p>{colors[1]}</p>
-            <i className="fas fa-lock"></i>
-          </div>
+            <i className={`fas ${ isColorLocked.position2 ? 'fa-unlock' : 'fa-lock'}`} onClick={() => this.handleColor('position2')}></i>          </div>
           <div style={{backgroundColor: colors[2]}} className="color-3">
             <p>{colors[2]}</p>
-            <i className="fas fa-lock"></i>
+            <i className={`fas ${ isColorLocked.position3 ? 'fa-unlock' : 'fa-lock'}`} onClick={() => this.handleColor('position3')}></i>
           </div>
           <div style={{backgroundColor: colors[3]}} className="color-4">
             <p>{colors[3]}</p>
-            <i className="fas fa-lock"></i>
+            <i className={`fas ${ isColorLocked.position4 ? 'fa-unlock' : 'fa-lock'}`} onClick={() => this.handleColor('position4')}></i>
           </div>
           <div style={{backgroundColor: colors[4]}} className="color-5">
             <p>{colors[4]}</p>
-            <i className="fas fa-lock"></i>
+            <i className={`fas ${ isColorLocked.position5 ? 'fa-unlock' : 'fa-lock'}`} onClick={() => this.handleColor('position5')}></i>
           </div>
         </section>
         <button onClick={() => this.makeColors()} className="gen-colors">Generate Colors</button>
