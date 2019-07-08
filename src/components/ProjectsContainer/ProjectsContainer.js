@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Project from '../Project/Project'
 
-class Projects extends Component {
+class ProjectsContainer extends Component {
   constructor() {
     super()
     this.state = {
@@ -24,4 +24,4 @@ class Projects extends Component {
   }
 }
 
-export default Projects;
+export default ProjectsContainer;

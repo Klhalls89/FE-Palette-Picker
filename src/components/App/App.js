@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ProjectsContainer from '../ProjectsContainer/ProjectsContainer'
-import { fetchProjects } from '../fetch/fetch'
+import { fetchProjects } from '../utils/fetch'
 
 class App extends Component {
   constructor() {
@@ -18,6 +18,7 @@ class App extends Component {
 
   getProjects = () => {
     const projects = fetchProjects();
+    console.log(projects)
   }
 
   makeColors = () => {
