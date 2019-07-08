@@ -17,6 +17,6 @@ const Project = () => {
         </section>
       </article>
   )
-}
+};
 
-export default Project
+export default Project;

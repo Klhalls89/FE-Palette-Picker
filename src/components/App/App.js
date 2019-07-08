@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import ProjectsContainer from '../ProjectsContainer/ProjectsContainer'
-import { fetchProjects } from '../fetch/fetch'
+import ProjectsContainer from '../ProjectsContainer/ProjectsContainer';
+import { fetchProjects } from '../../Utility/ApiCalls';
+import PaletteForm from '../PaletteForm/PaletteForm'
 
 class App extends Component {
   constructor() {
@@ -16,8 +17,9 @@ class App extends Component {
     this.getProjects();
   };
 
-  getProjects = () => {
-    const projects = fetchProjects();
+  getProjects = async () => {
+    const projects = await fetchProjects()
+    this.setState({projects})
   }
 
   makeColors = () => {
@@ -67,14 +69,7 @@ class App extends Component {
           </div>
         </section>
         <button onClick={() => this.makeColors()} className="gen-colors">Generate Colors</button>
-        <form className="color-form">
-          <select>
-            <option>project 1</option>
-            <option>project 2</option>
-          </select>
-          <input type="text"/>
-          <button className="save-pal">Save Palette</button>
-        </form>
+        <PaletteForm projects={this.state.projects} />
         <ProjectsContainer />
       </div>
     )
