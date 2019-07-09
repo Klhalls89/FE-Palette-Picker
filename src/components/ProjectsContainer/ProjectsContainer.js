@@ -27,7 +27,7 @@ class ProjectsContainer extends Component {
       const matchingPalettes = palettes.filter(palette => {
         return palette.project_id === project.id
       })
-      return <Project project={project} palettes={matchingPalettes}  />
+      return <Project key={Date.now()} project={project} palettes={matchingPalettes}  />
     })
     return newProjects
   }

@@ -2,7 +2,7 @@ import React from 'react';
 
 const PaletteForm = (props) => {
   const projectNames = props.projects.map((prop) => {
-    return <option>{prop.project_title}</option>
+    return <option key={Date.now()}>{prop.project_title}</option>
   });
   return (
     <form className="color-form">

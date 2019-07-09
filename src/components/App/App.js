@@ -75,7 +75,7 @@ class App extends Component {
     const { colors, palettes, projects } = this.state
     return (
       <div className="App">
-        <h1 className="logo">Palette Picker</h1>
+        <h1 className="logo">Gen Hex</h1>
         <section className="main-colors">
           <div style={{backgroundColor: colors[0].color}} className="color-1">
             <p>{colors[0].color}</p>
@@ -99,8 +99,8 @@ class App extends Component {
           </div>
         </section>
         <button onClick={() => this.makeColors()} className="gen-colors">Generate Colors</button>
-        { projects.length && <PaletteForm projects={projects} /> }
-        { projects.length && <ProjectsContainer projects={projects} /> }
+        <PaletteForm projects={projects} /> 
+        <ProjectsContainer projects={projects} /> 
       </div>
     )
   }
