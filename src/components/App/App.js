@@ -7,15 +7,15 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      colors: [],
+      colors: 
+      [
+        { color: '', isLocked: false },
+        { color: '', isLocked: false },
+        { color: '', isLocked: false },
+        { color: '', isLocked: false },
+        { color: '', isLocked: false }
+    ],
       projects: [],
-      isColorLocked: {
-        position1: true,
-        position2: true,
-        position3: true,
-        position4: true,
-        position5: true
-      }
   };
 }
 
@@ -30,12 +30,25 @@ class App extends Component {
   }
 
   makeColors = () => {
-    let colors = []
-    for (let i = 0; i < 5; i++) {
-      let color = this.genHex()
-      colors.push(color)
+
+    if(!this.state.colors.length) {
+      let colors = []
+      for (let i = 0; i < 5; i++) {
+        let color = this.genHex()
+        colors.push(color)
+      }
+      this.setState({colors})
+
+    } else {
+      let newColors = this.state.colors.map(color => {
+        if(color.isLocked == false) {
+          return color = this.genHex()
+        } else {
+          return color
+        }
+      })
+      this.setState({colors: newColors})
     }
-    this.setState({colors})
   };
 
   genHex = () => {
@@ -45,41 +58,46 @@ class App extends Component {
         finalColor += hexable
         return finalColor.slice(0, 6);
     }, '')
-    return `#${newColor}`;
+    return {
+      color:`#${newColor}`,
+      isLocked: false
+      };
   };
 
-  handleColor = (position) => {
-    const { isColorLocked } = this.state
-    const newLock = { ...isColorLocked }
-    newLock[`${position}`] = !newLock[`${position}`]
-    this.setState({isColorLocked : newLock})
+  handleColor = (location) => {
+    const { colors } = this.state
+    const newLock = [...colors ]
+    newLock[`${location}`].isLocked = !newLock[`${location}`].isLocked
+    this.setState({ colors : newLock })
   }
 
   render() {
-    const {colors, isColorLocked} = this.state
-
+    const {colors } = this.state
+    console.log(colors)
+    console.log('colors[0].isLocked', colors[0].isLocked)
     return (
       <div className="App">
         <h1 className="logo">Palette Picker</h1>
         <section className="main-colors">
-          <div style={{backgroundColor: colors[0]}} className="color-1">
-            <p>{colors[0]}</p>
-            <i className={`fas ${ isColorLocked.position1 ? 'fa-unlock' : 'fa-lock'}`} onClick={() => this.handleColor('position1')}></i>
+          <div style={{backgroundColor: colors[0].color}} className="color-1">
+            <p>{colors[0].color}</p>
+            <i className={`fas ${ (colors[0].isLocked) ? 'fa-lock' : 'fa-unlock'}`} onClick={() => this.handleColor(0)}></i>
           </div>
-          <div style={{backgroundColor: colors[1]}} className="color-2">
-            <p>{colors[1]}</p>
-            <i className={`fas ${ isColorLocked.position2 ? 'fa-unlock' : 'fa-lock'}`} onClick={() => this.handleColor('position2')}></i>          </div>
-          <div style={{backgroundColor: colors[2]}} className="color-3">
-            <p>{colors[2]}</p>
-            <i className={`fas ${ isColorLocked.position3 ? 'fa-unlock' : 'fa-lock'}`} onClick={() => this.handleColor('position3')}></i>
+          <div style={{backgroundColor: colors[1].color}} className="color-2">
+            <p>{colors[1].color}</p>
+            <i className={`fas ${ (colors[1].isLocked) ? 'fa-lock' : 'fa-unlock'}`} onClick={() => this.handleColor(1)}></i>        
+              </div>
+          <div style={{backgroundColor: colors[2].color}} className="color-3">
+            <p>{colors[2].color}</p>
+            <i className={`fas ${ (colors[2].isLocked) ? 'fa-lock' : 'fa-unlock'}`} onClick={() => this.handleColor(2)}></i>
           </div>
-          <div style={{backgroundColor: colors[3]}} className="color-4">
-            <p>{colors[3]}</p>
-            <i className={`fas ${ isColorLocked.position4 ? 'fa-unlock' : 'fa-lock'}`} onClick={() => this.handleColor('position4')}></i>
+          <div style={{backgroundColor: colors[3].color}} className="color-4">
+            <p>{colors[3].color}</p>
+            <i className={`fas ${ (colors[3].isLocked) ? 'fa-lock' : 'fa-unlock'}`} onClick={() => this.handleColor(3)}></i>
           </div>
-          <div style={{backgroundColor: colors[4]}} className="color-5">
-            <p>{colors[4]}</p>
-            <i className={`fas ${ isColorLocked.position5 ? 'fa-unlock' : 'fa-lock'}`} onClick={() => this.handleColor('position5')}></i>
+          <div style={{backgroundColor: colors[4].color}} className="color-5">
+            <p>{colors[4].color}</p>
+            <i className={`fas ${ (colors[4].isLocked) ? 'fa-lock' : 'fa-unlock'}`} onClick={() => this.handleColor(4)}></i>
           </div>
         </section>
         <button onClick={() => this.makeColors()} className="gen-colors">Generate Colors</button>
