@@ -1,9 +1,7 @@
-export const fetchProjects = async () => {
-  const url = 'http://localhost:3001/api/v1/projects/'
+export const fetchInfo = async (url) => {
   const response = await fetch(url)
   if (response.status == 200) {
     const body = await response.json()
-    console.log('body',body)
     return body
   }; 
 };

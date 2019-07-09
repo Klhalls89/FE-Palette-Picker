@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ProjectsContainer from '../ProjectsContainer/ProjectsContainer';
-import { fetchProjects } from '../../Utility/ApiCalls';
+import { fetchInfo } from '../../Utility/ApiCalls';
 import PaletteForm from '../PaletteForm/PaletteForm'
 
 class App extends Component {
@@ -25,8 +25,11 @@ class App extends Component {
   };
 
   getProjects = async () => {
-    const projects = await fetchProjects()
-    this.setState({projects})
+    const projects = await fetchInfo('http://localhost:3001/api/v1/projects/')
+    console.log(projects)
+    const palettes = await fetchInfo('http://localhost:3001/api/v1/palettes/')
+    console.log(palettes)
+
   }
 
   makeColors = () => {
