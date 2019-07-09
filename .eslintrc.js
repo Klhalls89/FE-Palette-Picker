@@ -1,5 +1,6 @@
 module.exports = {
   "extends": "eslint:recommended",
+  "parser": "babel-eslint",
   "env": {
     "browser": true,
     "jest": true,
@@ -7,7 +8,7 @@ module.exports = {
     "es6": true
   },
   "parserOptions": {
-    "sourceType": "module"
+    "sourceType": "module",
   },
   "rules": {
     "brace-style": "error",
@@ -20,7 +21,6 @@ module.exports = {
     "curly": "error",
     "eqeqeq": ["error", "always"],
     "getter-return": ["error", { "allowImplicit": true }],
-
     "indent": ["warn", 2],
     "key-spacing": [
       "error", {
