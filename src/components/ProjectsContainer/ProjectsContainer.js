@@ -1,31 +1,43 @@
 import React, { Component } from 'react';
-import Project from '../Project/Project'
+import Project from '../Project/Project';
+import { newProject } from '../../Utility/ApiCalls';
 
 class ProjectsContainer extends Component {
   constructor() {
     super();
     this.state = {
       projects: [],
-      projectTitle: ''
+      project_title: ''
     };
   }
 
   handleChange = (event) => {
     const { value } = event.target;
 
-    this.setState({projectTitle: value});
+    this.setState({project_title: value});
   }
 
 
+  handleSubmit = (event) => {
+    event.preventDefault();
+    const {project_title} = this.state;
+
+    newProject({project_title});
+    this.props.handleProject('project', project_title);
+    this.setState({project_title: ''});
+  }
 
   render() {
+
     return (
       <div className="projects">
-        <form className="project-form">
-          <label htmlFor="project-title-input">Enter Project Name</label>
-          <input type="text" id="project-title-input" 
-            onChange={(event) => this.handleChange(event)}
-            value={this.state.projectTitle}
+        <form className="project-form" onSubmit={this.handleSubmit}>
+          <input type="text" 
+            className="title-input" 
+            onChange={this.handleChange}
+            autoComplete='off'
+            value={this.state.project_title}
+            placeholder='Enter Project Title'
           />
           <button>Submit</button>
         </form>

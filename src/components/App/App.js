@@ -1,10 +1,10 @@
-// eslint-disable-next-line no-unused-vars
+/* eslint-disable no-console */
+/* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
-// eslint-disable-next-line no-unused-vars
 import ProjectsContainer from '../ProjectsContainer/ProjectsContainer';
 import { fetchProjects } from '../../Utility/ApiCalls';
-// eslint-disable-next-line no-unused-vars
 import PaletteForm from '../PaletteForm/PaletteForm';
+
 
 class App extends Component {
   constructor() {
@@ -16,10 +16,11 @@ class App extends Component {
         { color: '', isLocked: false },
         { color: '', isLocked: false },
         { color: '', isLocked: false },
-        { color: '', isLocked: false }
+        { color: '', isLocked: false } 
       ],
       projects: [],
-    };
+      folder: {}
+    }; 
   }
 
   componentDidMount() {
@@ -29,18 +30,15 @@ class App extends Component {
 
   getProjects = async () => {
     const projects = await fetchProjects();
-
     this.setState({projects});
   }
 
   makeColors = () => {
-
     if (!this.state.colors.length) {
       let colors = [];
 
       for (let i = 0; i < 5; i++) {
         let color = this.genHex();
-
         colors.push(color);
       }
       this.setState({colors});
@@ -61,9 +59,7 @@ class App extends Component {
   genHex = () => {
     let hexables = 
       [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F' ];
-
     let shuffledHexables = hexables.sort(() => Math.random() - 0.5);
-
     let newColor = shuffledHexables.reduce((finalColor, hexable) => {
       
       finalColor += hexable;
@@ -84,11 +80,28 @@ class App extends Component {
     this.setState({ colors: newLock });
   }
 
+  handleProject = (section, name) => {
+    const {colors} = this.state;
+    let preFolder = {};
+
+    if (section === 'project') {
+      const folder = {...this.state.folder, project_title: name};
+      this.setState({folder});
+    } else {
+      for (let i = 1; i < colors.length + 1; i++) {
+        const cleanColor = colors[i - 1].color.replace('#', '');
+        preFolder[`color_${[i]}`] = cleanColor;
+      }
+      preFolder.palette_title = name;
+      this.setState({folder: preFolder});
+    }
+  }
+
   render() {
     const { colors } = this.state;
 
     return (
-      <div className="App">
+      <div className="App"> 
         <h1 className="logo">Palette Picker</h1>
         <section className="main-colors">
           <div style={{backgroundColor: colors[0].color}} className="color-1">
@@ -125,8 +138,12 @@ class App extends Component {
         <button onClick={() => this.makeColors()} className="gen-colors">
           Generate Colors
         </button>
-        <PaletteForm projects={this.state.projects} />
-        <ProjectsContainer />
+        <PaletteForm 
+          projects={this.state.projects} 
+          handleProject={this.handleProject}
+        />
+        <ProjectsContainer 
+          handleProject={this.handleProject}/>
       </div>
     );
   }

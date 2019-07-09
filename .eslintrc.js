@@ -11,6 +11,7 @@ module.exports = {
     "sourceType": "module",
   },
   "rules": {
+    "react/destructuring-assignment": "off",
     "brace-style": "error",
     "comma-spacing": [
       "warn", {
@@ -46,10 +47,6 @@ module.exports = {
       "error", {
         "newIsCap": true
       }
-    ],
-    "newline-after-var": [
-      "error",
-      "always"
     ],
     "no-template-curly-in-string": "error",
     "object-shorthand": [
