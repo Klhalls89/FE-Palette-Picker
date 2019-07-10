@@ -16,75 +16,80 @@ exports[`App should match the snapshot 1`] = `
       className="color-1"
       style={
         Object {
-          "backgroundColor": "#1F9528",
+          "backgroundColor": "#D5FEB6",
         }
       }
     >
       <p>
-        #1F9528
+        #D5FEB6
       </p>
       <i
-        className="fas fa-lock"
+        className="fas fa-unlock"
+        onClick={[Function]}
       />
     </div>
     <div
       className="color-2"
       style={
         Object {
-          "backgroundColor": "#23C86E",
+          "backgroundColor": "#8E9347",
         }
       }
     >
       <p>
-        #23C86E
+        #8E9347
       </p>
       <i
-        className="fas fa-lock"
+        className="fas fa-unlock"
+        onClick={[Function]}
       />
     </div>
     <div
       className="color-3"
       style={
         Object {
-          "backgroundColor": "#2FA6D1",
+          "backgroundColor": "#823471",
         }
       }
     >
       <p>
-        #2FA6D1
+        #823471
       </p>
       <i
-        className="fas fa-lock"
+        className="fas fa-unlock"
+        onClick={[Function]}
       />
     </div>
     <div
       className="color-4"
       style={
         Object {
-          "backgroundColor": "#0235E6",
+          "backgroundColor": "#1DAFB4",
         }
       }
     >
       <p>
-        #0235E6
+        #1DAFB4
       </p>
       <i
-        className="fas fa-lock"
+        className="fas fa-unlock"
+        onClick={[Function]}
       />
     </div>
     <div
       className="color-5"
       style={
         Object {
-          "backgroundColor": "#DFEC94",
+          "backgroundColor": "#8E964F",
         }
       }
     >
       <p>
-        #DFEC94
+        #8E964F
       </p>
       <i
-        className="fas fa-lock"
+        className="fas fa-unlock"
+        onClick={[Function]}
       />
     </div>
   </section>
@@ -94,26 +99,12 @@ exports[`App should match the snapshot 1`] = `
   >
     Generate Colors
   </button>
-  <form
-    className="color-form"
-  >
-    <select>
-      <option>
-        project 1
-      </option>
-      <option>
-        project 2
-      </option>
-    </select>
-    <input
-      type="text"
-    />
-    <button
-      className="save-pal"
-    >
-      Save Palette
-    </button>
-  </form>
-  <Projects />
+  <PaletteForm
+    handleProject={[Function]}
+    projects={Array []}
+  />
+  <ProjectsContainer
+    handleProject={[Function]}
+  />
 </div>
 `;
