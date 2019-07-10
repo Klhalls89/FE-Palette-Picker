@@ -31,12 +31,12 @@ class App extends Component {
   }
 
   getProjects = async () => {
-    const projects = await fetchInfo('projects')
+    const projects = await fetchInfo('projects');
     this.setState({projects});
   }
 
   getPalettes = async () => {
-    const allPalettes = await fetchInfo('palettes')
+    const allPalettes = await fetchInfo('palettes');
     this.setState({allPalettes});
   }
 
@@ -146,11 +146,14 @@ class App extends Component {
         </button>
         { projects.length && <PaletteForm 
           projects={this.state.projects} 
-          handleProject={this.handleProject}
-        />}
+          handleProject={this.handleProject}/>
+        }
         <SubmitProject
           handleProject={this.handleProject}/>
-        { allPalettes.length > 0 && <ProjectsContainer projects={projects} allPalettes={allPalettes}/>} 
+        { allPalettes.length > 0 && 
+          <ProjectsContainer projects={projects} 
+            allPalettes={allPalettes}/>
+        } 
       </div>
     );
   }

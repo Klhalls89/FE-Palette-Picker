@@ -15,7 +15,6 @@ const Project = ({
           <h3 className="pal-name">
             {palette_title}
           </h3>
-          <i className="fas fa-trash-alt"></i>
           <section className="saved-colors">
             <div style={{backgroundColor: `#${color_1}`}} 
               className="saved-color1">
@@ -32,6 +31,7 @@ const Project = ({
             <div style={{backgroundColor: `#${color_5}`}} 
               className="saved-color5">
             </div>
+          <i className="fas fa-trash-alt"></i>
           </section>
         </div>
       </article>

@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import Project from '../Project/Project';
 
 class ProjectsContainer extends Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+    // super(props);
+  // }
 
   displayProjects = () => {
     const { projects, allPalettes } = this.props;

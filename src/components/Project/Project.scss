@@ -15,6 +15,12 @@
 
       .fas {
         margin: 5px;
+        font-size: 36px;
+        padding-left: 17px;
+        margin: auto;
+        &:hover {
+          color: grey;
+        }
       }
     }
 
