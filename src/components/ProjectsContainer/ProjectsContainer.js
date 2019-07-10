@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 import Project from '../Project/Project';
+import { removePalete } from '../../Utility/ApiCalls';
 
 class ProjectsContainer extends Component {
-  // constructor(props) {
-    // super(props);
-  // }
+  constructor(props) {
+    super(props);
+  }
+
+   deletePalette = (id) => {
+    removePalete(id);
+  }
 
   displayProjects = () => {
     const { projects, allPalettes } = this.props;
@@ -22,7 +27,7 @@ class ProjectsContainer extends Component {
     }
 
     let allHistory = combineInfo.map(info => {
-      return <Project key={info.id} {...info}/>;
+      return <Project deletePalette={this.deletePalette} editPalette={this.props.editPalette} key={info.id} {...info}/>;
     });
     return allHistory;
   }
@@ -35,7 +40,7 @@ class ProjectsContainer extends Component {
         </section>
       </div>
     );
-  }
-}
+  };
+};
 
 export default ProjectsContainer;

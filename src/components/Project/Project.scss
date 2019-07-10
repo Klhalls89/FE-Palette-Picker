@@ -8,6 +8,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      border: solid #fff 3px;
 
       h3 {
         font-family: $accent-font;
@@ -34,5 +35,10 @@
         width: 50px;
         margin: 5px;
       }
+    }
+
+    .saved-palette-disp:hover {
+      border: solid #3C3C3C 3px;
+      cursor: pointer;
     }
   }

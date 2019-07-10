@@ -40,6 +40,10 @@ class App extends Component {
     this.setState({allPalettes});
   }
 
+  editPalette = (colors) => {
+    console.log(colors)
+  }
+
   makeColors = () => {
     if (!this.state.colors.length) {
       let colors = [];
@@ -104,6 +108,7 @@ class App extends Component {
     }
   }
 
+
   render() {
     const { colors, projects, allPalettes } = this.state;
     return (
@@ -152,7 +157,7 @@ class App extends Component {
           handleProject={this.handleProject}/>
         { allPalettes.length > 0 && 
           <ProjectsContainer projects={projects} 
-            allPalettes={allPalettes}/>
+            allPalettes={allPalettes} editPalette={this.editPalette}/>
         } 
       </div>
     );
