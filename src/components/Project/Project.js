@@ -1,19 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Project = ({ 
-  palette_title, project_title, 
-  id, color_1, color_2, color_3, color_4, color_5
-}) => {
+class Project extends Component {
+  constructor() {
+    super();
+  }
 
-  if (id) { 
-    return (
+
+  render() {
+    const { id, color_1, color_2, color_3, color_4, color_5 } = this.props;
+
+    const allProjects = 
       <article className="project-area">
         <h2 className="proj-name">
-          {project_title}
+          {this.props.project_title}
         </h2>
         <div className="saved-palette-disp">
           <h3 className="pal-name">
-            {palette_title}
+            {this.props.palette_title}
           </h3>
           <section className="saved-colors">
             <div style={{backgroundColor: `#${color_1}`}} 
@@ -31,20 +34,17 @@ const Project = ({
             <div style={{backgroundColor: `#${color_5}`}} 
               className="saved-color5">
             </div>
-          <i className="fas fa-trash-alt"></i>
+            <i className="fas fa-trash-alt"></i>
           </section>
         </div>
       </article>
-    );
-  } else {
+
     return (
-      <div>
-        <h1></h1>
-      </div>
-    );
+      <section>
+        {(id) &&  allProjects}
+      </section>
+    );   
   }
+}
 
-
-  
-};
 export default Project;
