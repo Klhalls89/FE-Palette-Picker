@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Project from '../Project/Project';
 import { newProject } from '../../Utility/ApiCalls';
 
-class ProjectsContainer extends Component {
+class SubmitProject extends Component {
   constructor() {
     super();
     this.state = {
@@ -13,7 +13,6 @@ class ProjectsContainer extends Component {
 
   handleChange = (event) => {
     const { value } = event.target;
-
     this.setState({project_title: value});
   }
 
@@ -49,4 +48,4 @@ class ProjectsContainer extends Component {
   }
 }
 
-export default ProjectsContainer;
+export default SubmitProject;

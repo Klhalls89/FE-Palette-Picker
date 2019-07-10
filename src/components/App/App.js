@@ -1,9 +1,10 @@
 /* eslint-disable no-console */
 /* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
-import ProjectsContainer from '../ProjectsContainer/ProjectsContainer';
-import { fetchProjects } from '../../Utility/ApiCalls';
+import SubmitProject from '../SubmitProject/SubmitProject';
+import { fetchProjects, newFolder } from '../../Utility/ApiCalls';
 import PaletteForm from '../PaletteForm/PaletteForm';
+
 
 
 class App extends Component {
@@ -81,12 +82,12 @@ class App extends Component {
   }
 
   handleProject = (section, name) => {
-    const {colors} = this.state;
+    const {colors } = this.state;
     let preFolder = {};
 
     if (section === 'project') {
-      const folder = {...this.state.folder, project_title: name};
-      this.setState({folder});
+      const postFolder = {...this.state.folder, project_title: name};
+      newFolder(postFolder);
     } else {
       for (let i = 1; i < colors.length + 1; i++) {
         const cleanColor = colors[i - 1].color.replace('#', '');
@@ -142,7 +143,7 @@ class App extends Component {
           projects={this.state.projects} 
           handleProject={this.handleProject}
         />
-        <ProjectsContainer 
+        <SubmitProject
           handleProject={this.handleProject}/>
       </div>
     );

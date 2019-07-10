@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import {baseUrl} from './Config/BaseUrl';
 
 export const fetchProjects = async () => {
@@ -6,7 +7,6 @@ export const fetchProjects = async () => {
 
   if (response.status == 200) {
     const body = await response.json();
-
     return body;
   } 
 };
@@ -27,3 +27,16 @@ export const newProject = async (projectName) => {
     return response.statusText;
   }
 };
+
+export const newFolder = async (folder) => {
+  const url = `${baseUrl}/api/v1/palettes`;
+  const options = {
+    method: 'POST',
+    mode: 'cors',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(folder)
+  };
+  const response = await fetch(url, options);
+}
