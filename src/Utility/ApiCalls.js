@@ -39,3 +39,11 @@ export const newFolder = async (folder) => {
   };
   const response = await fetch(url, options);
 }
+
+export const removePalete = async (id) => {
+  const url = `${baseUrl}/api/v1/palettes/${id}`
+  const options = {
+    method: 'DELETE'
+  };
+  const response = await fetch(url, options)
+};

@@ -22,25 +22,22 @@ class PaletteForm extends Component {
 
   options = () => {
     const {projects} = this.props;
-
     if (projects.length > 0) {
-      projects.map((prop) => {
-        return <option key={Date.now()}>{prop.project_title}</option>
+      return  projects.map(prop => {
+        return <option key={Date.now()}>{prop.project_title}</option>;
       });
     }
   }
   
   render() {
     const { palette_title } = this.state;
-    const projectNames = this.options();
- 
     return (
       <form className="color-form"
         onSubmit={this.handleSubmit}
         value={palette_title}
       >
         <select>
-          {projectNames}
+          {this.options()}
         </select>
         <input 
           className='title-input'

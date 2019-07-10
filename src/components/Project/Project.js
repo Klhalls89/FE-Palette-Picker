@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
+import { removePalete } from '../../Utility/ApiCalls';
 
 class Project extends Component {
   constructor() {
     super();
   }
-
+  deletePalette = () => {
+    const { id } = this.props;
+    removePalete(id);
+  }
 
   render() {
     const { id, color_1, color_2, color_3, color_4, color_5 } = this.props;
@@ -34,7 +38,7 @@ class Project extends Component {
             <div style={{backgroundColor: `#${color_5}`}} 
               className="saved-color5">
             </div>
-            <i className="fas fa-trash-alt"></i>
+            <i  className="fas fa-trash-alt" onClick={this.deletePalette}></i>
           </section>
         </div>
       </article>
