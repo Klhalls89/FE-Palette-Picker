@@ -1,5 +1,8 @@
+/* eslint-disable no-console */
+import {baseUrl} from './Config/BaseUrl';
+
 export const fetchInfo = async (endpoint) => {
-  const url = `http://localhost:3001/api/v1/${endpoint}/`
+  const url = `${baseUrl}/api/v1/${endpoint}/`
   const response = await fetch(url)
   if (response.status == 200) {
     const body = await response.json()
@@ -7,3 +10,32 @@ export const fetchInfo = async (endpoint) => {
   }; 
 };
 
+export const newProject = async (projectName) => {
+  const url = `${baseUrl}/api/v1/projects`;
+  const options = {
+    method: 'POST',
+    mode: 'cors',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(projectName)
+  };
+
+  const response = await fetch(url, options);
+  if (!response.ok) {
+    return response.statusText;
+  }
+};
+
+export const newFolder = async (folder) => {
+  const url = `${baseUrl}/api/v1/palettes`;
+  const options = {
+    method: 'POST',
+    mode: 'cors',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(folder)
+  };
+  const response = await fetch(url, options);
+}

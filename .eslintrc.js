@@ -1,5 +1,6 @@
 module.exports = {
   "extends": "eslint:recommended",
+  "parser": "babel-eslint",
   "env": {
     "browser": true,
     "jest": true,
@@ -7,9 +8,10 @@ module.exports = {
     "es6": true
   },
   "parserOptions": {
-    "sourceType": "module"
+    "sourceType": "module",
   },
   "rules": {
+    "react/destructuring-assignment": "off",
     "brace-style": "error",
     "comma-spacing": [
       "warn", {
@@ -20,7 +22,6 @@ module.exports = {
     "curly": "error",
     "eqeqeq": ["error", "always"],
     "getter-return": ["error", { "allowImplicit": true }],
-
     "indent": ["warn", 2],
     "key-spacing": [
       "error", {
@@ -46,10 +47,6 @@ module.exports = {
       "error", {
         "newIsCap": true
       }
-    ],
-    "newline-after-var": [
-      "error",
-      "always"
     ],
     "no-template-curly-in-string": "error",
     "object-shorthand": [

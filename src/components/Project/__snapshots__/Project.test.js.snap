@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Projects Projects component should match the snapshot 1`] = `
+<article
+  className="project-area"
+>
+  <h2
+    className="proj-name"
+  >
+    project name
+  </h2>
+  <div
+    className="saved-palette-disp"
+  >
+    <h3
+      className="pal-name"
+    >
+      palette name
+    </h3>
+    <i
+      className="fas fa-trash-alt"
+    />
+  </div>
+  <section
+    className="saved-colors"
+  >
+    <div
+      className="saved-color1"
+    />
+    <div
+      className="saved-color2"
+    />
+    <div
+      className="saved-color3"
+    />
+    <div
+      className="saved-color4"
+    />
+    <div
+      className="saved-color5"
+    />
+  </section>
+</article>
+`;
