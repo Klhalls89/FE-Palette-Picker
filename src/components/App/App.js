@@ -40,8 +40,13 @@ class App extends Component {
     this.setState({allPalettes});
   }
 
-  editPalette = (colors) => {
-    console.log(colors)
+  editPalette = (id) => {
+    let { allPalettes } = this.state
+    const matchingPalette = allPalettes.find(palette => {
+      return palette.id === id
+    }) 
+    console.log(matchingPalette)
+    
   }
 
   makeColors = () => {

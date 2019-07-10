@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const Project = (props) => {
 
     const { id, color_1, color_2, color_3, color_4, color_5 } = props;
@@ -9,7 +8,7 @@ const Project = (props) => {
         <h2 className="proj-name">
           {props.project_title}
         </h2>
-        <div className="saved-palette-disp">
+        <div className="saved-palette-disp" onClick={() => props.editPalette(id)}>
           <h3 className="pal-name">
             {props.palette_title}
           </h3>
