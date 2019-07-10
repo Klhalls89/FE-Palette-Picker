@@ -25,7 +25,7 @@ class App extends Component {
   };
 
   getProjects = async () => {
-    const projects = await fetchInfo('http://localhost:3001/api/v1/projects/')
+    const projects = await fetchInfo('projects')
     this.setState({projects})
   }
 
@@ -100,6 +100,10 @@ class App extends Component {
         </section>
         <button onClick={() => this.makeColors()} className="gen-colors">Generate Colors</button>
         <PaletteForm projects={projects} /> 
+        <form className="project-form">
+          <input type="text"/>
+          <button>Project Name</button>
+        </form>
         <ProjectsContainer projects={projects} /> 
       </div>
     )

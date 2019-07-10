@@ -15,7 +15,7 @@ class ProjectsContainer extends Component {
   }
 
   getPalettes = async () => {
-    const palettes = await fetchInfo('http://localhost:3001/api/v1/palettes/')
+    const palettes = await fetchInfo('palettes')
     this.setState({palettes})
   }
 
@@ -36,10 +36,6 @@ class ProjectsContainer extends Component {
     const projectsToDisplay = this.displayProjects()
     return (
       <div className="projects">
-        <form className="project-form">
-          <input type="text"/>
-          <button>Project Name</button>
-        </form>
         <section className="saved-portion">
         {projectsToDisplay}
         </section>
