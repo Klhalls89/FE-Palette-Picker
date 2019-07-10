@@ -1,15 +1,10 @@
   .project-area {
-    display: grid;
-    grid-template-areas: "... proj "
-                          "pal colors";
+
     .proj-name {
-      grid-area: proj;
-      text-align: left;
-      font-family: $accent-font;
+      text-align: center;
     } 
     
     .saved-palette-disp {
-      grid-area: pal;
       display: flex;
       align-items: center;
       justify-content: center;

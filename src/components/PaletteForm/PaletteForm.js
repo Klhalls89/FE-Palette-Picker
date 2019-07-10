@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-// const PaletteForm = (props) => {
 class PaletteForm extends Component {
   constructor() {
     super(); 
@@ -20,15 +19,12 @@ class PaletteForm extends Component {
     this.setState({palette_title: value});
   };
   
-
-
-
   render() {
     const { palette_title } = this.state;
  
-    const projectNames = this.props.projects.map((prop) => {
-      return <option>{prop.project_title}</option>;
-    });  
+    const projectNames = props.projects.map((prop) => {
+      return <option key={Date.now()}>{prop.project_title}</option>
+    });
 
     return (
       <form className="color-form"

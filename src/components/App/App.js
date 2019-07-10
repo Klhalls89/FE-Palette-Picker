@@ -1,11 +1,10 @@
 /* eslint-disable no-console */
 /* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
+import ProjectsContainer from '../ProjectsContainer/ProjectsContainer';
 import SubmitProject from '../SubmitProject/SubmitProject';
-import { fetchProjects, newFolder } from '../../Utility/ApiCalls';
+import { fetchInfo, newFolder } from '../../Utility/ApiCalls';
 import PaletteForm from '../PaletteForm/PaletteForm';
-
-
 
 class App extends Component {
   constructor() {
@@ -30,8 +29,8 @@ class App extends Component {
   }
 
   getProjects = async () => {
-    const projects = await fetchProjects();
-    this.setState({projects});
+    const projects = await fetchInfo('projects')
+    this.setState({projects})
   }
 
   makeColors = () => {
@@ -99,11 +98,10 @@ class App extends Component {
   }
 
   render() {
-    const { colors } = this.state;
-
+    const { colors, projects } = this.state
     return (
-      <div className="App"> 
-        <h1 className="logo">Palette Picker</h1>
+      <div className="App">
+        <h1 className="logo">Gen Hex</h1>
         <section className="main-colors">
           <div style={{backgroundColor: colors[0].color}} className="color-1">
             <p>{colors[0].color}</p>
@@ -145,6 +143,7 @@ class App extends Component {
         />
         <SubmitProject
           handleProject={this.handleProject}/>
+        <ProjectsContainer projects={projects} /> 
       </div>
     );
   }

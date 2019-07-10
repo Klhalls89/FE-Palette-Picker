@@ -1,14 +1,13 @@
 /* eslint-disable no-console */
 import {baseUrl} from './Config/BaseUrl';
 
-export const fetchProjects = async () => {
-  const url = 'http://localhost:3001/api/v1/projects/';
-  const response = await fetch(url);
-
+export const fetchInfo = async (endpoint) => {
+  const url = `${baseUrl}/api/v1/${endpoint}/`
+  const response = await fetch(url)
   if (response.status == 200) {
-    const body = await response.json();
-    return body;
-  } 
+    const body = await response.json()
+    return body
+  }; 
 };
 
 export const newProject = async (projectName) => {
