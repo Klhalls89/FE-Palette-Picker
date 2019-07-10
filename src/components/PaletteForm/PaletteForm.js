@@ -7,6 +7,7 @@ class PaletteForm extends Component {
       palette_title: ''
     };
   }
+
   handleSubmit = e => {
     e.preventDefault();
     const { palette_title } = this.state;
@@ -18,21 +19,25 @@ class PaletteForm extends Component {
     const { value } = e.target;
     this.setState({palette_title: value});
   };
+
+  options = () => {
+    const {projects} = this.props;
+    if (projects.length > 0) {
+      return  projects.map(prop => {
+        return <option key={Date.now()}>{prop.project_title}</option>;
+      });
+    }
+  }
   
   render() {
     const { palette_title } = this.state;
- 
-    const projectNames = props.projects.map((prop) => {
-      return <option key={Date.now()}>{prop.project_title}</option>
-    });
-
     return (
       <form className="color-form"
         onSubmit={this.handleSubmit}
         value={palette_title}
       >
         <select>
-          {projectNames}
+          {this.options()}
         </select>
         <input 
           className='title-input'

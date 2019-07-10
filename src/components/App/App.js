@@ -19,18 +19,25 @@ class App extends Component {
         { color: '', isLocked: false } 
       ],
       projects: [],
-      folder: {}
+      folder: {},
+      allPalettes: []
     }; 
   }
 
   componentDidMount() {
     this.makeColors();
     this.getProjects();
+    this.getPalettes();
   }
 
   getProjects = async () => {
-    const projects = await fetchInfo('projects')
-    this.setState({projects})
+    const projects = await fetchInfo('projects');
+    this.setState({projects});
+  }
+
+  getPalettes = async () => {
+    const allPalettes = await fetchInfo('palettes');
+    this.setState({allPalettes});
   }
 
   makeColors = () => {
@@ -98,7 +105,7 @@ class App extends Component {
   }
 
   render() {
-    const { colors, projects } = this.state
+    const { colors, projects, allPalettes } = this.state;
     return (
       <div className="App">
         <h1 className="logo">Gen Hex</h1>
@@ -137,13 +144,16 @@ class App extends Component {
         <button onClick={() => this.makeColors()} className="gen-colors">
           Generate Colors
         </button>
-        <PaletteForm 
+        { projects.length && <PaletteForm 
           projects={this.state.projects} 
-          handleProject={this.handleProject}
-        />
+          handleProject={this.handleProject}/>
+        }
         <SubmitProject
           handleProject={this.handleProject}/>
-        <ProjectsContainer projects={projects} /> 
+        { allPalettes.length > 0 && 
+          <ProjectsContainer projects={projects} 
+            allPalettes={allPalettes}/>
+        } 
       </div>
     );
   }
