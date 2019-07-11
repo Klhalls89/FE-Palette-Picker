@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SubmitProjects Projects component should match the snapshot 1`] = `
+<div
+  className="projects"
+>
+  <form
+    className="project-form"
+    onMouseEnter={[Function]}
+    onSubmit={[Function]}
+  >
+    <input
+      autoComplete="off"
+      className="title-input"
+      onChange={[Function]}
+      placeholder="Enter Project Title"
+      type="text"
+      value=""
+    />
+    <button
+      className="submit-btn"
+    >
+      Submit
+    </button>
+  </form>
+  <section
+    className="saved-portion"
+  >
+    <Project />
+  </section>
+</div>
+`;

@@ -134,7 +134,9 @@ class App extends Component {
           <div style={{backgroundColor: colors[0].color}} className="color-1">
             <p>{colors[0].color}</p>
             <i className={`fas ${ (colors[0].isLocked) ? 
-              'fa-lock' : 'fa-unlock'}`} onClick={() => this.handleColor(0)}>
+              'fa-lock' : 'fa-unlock'}`} 
+            id="first-color"
+            onClick={() => this.handleColor(0)}>
             </i>
           </div>
           <div style={{backgroundColor: colors[1].color}} className="color-2">
@@ -162,7 +164,7 @@ class App extends Component {
             </i>
           </div>
         </section>
-        <button onClick={() => this.makeColors()} id="gen-colors">
+        <button  id="gen-colors" onClick={this.makeColors}>
           Generate Colors
         </button>
         { projects.length && <PaletteForm 
