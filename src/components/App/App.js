@@ -20,7 +20,8 @@ class App extends Component {
       ],
       projects: [],
       folder: {},
-      allPalettes: []
+      allPalettes: [],
+      editMode: false
     }; 
   }
 
@@ -41,7 +42,7 @@ class App extends Component {
   }
 
   editPalette = (id) => {
-    let { allPalettes } = this.state
+    let { allPalettes, editMode } = this.state;
     const matchingPalette = allPalettes.find(palette => {
       return palette.id === id
     }) 
@@ -52,8 +53,8 @@ class App extends Component {
     let color4 = {color:`#${matchingPalette.color_4}`,isLocked: true}
     let color5 = {color:`#${matchingPalette.color_5}`,isLocked: true}
     
-    let newColors = [color1, color2, color3, color4, color5]
-    this.setState({colors: newColors})
+    let newColors = [color1, color2, color3, color4, color5];
+    this.setState({colors: newColors, editMode: !editMode});
    
 
   }

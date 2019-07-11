@@ -2,13 +2,13 @@ import React from 'react';
 
 const Project = (props) => {
 
-    const { id, color_1, color_2, color_3, color_4, color_5 } = props;
-    const allProjects = 
+  const { id, color_1, color_2, color_3, color_4, color_5 } = props;
+  const allProjects = 
       <article className="project-area">
         <h2 className="proj-name">
           {props.project_title}
         </h2>
-        <div className="saved-palette-disp" onClick={() => props.editPalette(id)}>
+        <div className="saved-palette-disp" >
           <h3 className="pal-name">
             {props.palette_title}
           </h3>
@@ -26,18 +26,20 @@ const Project = (props) => {
               className="saved-color4">
             </div>
             <div style={{backgroundColor: `#${color_5}`}} 
-              className="saved-color5">
+              className="saved-colors5">
             </div>
-            <i  className="fas fa-trash-alt" onClick={() => props.deletePalette(id)}></i>
+            <i class="far fa-edit" onClick={() => props.editPalette(id)}></i>
+            <i  className="fas fa-trash-alt" 
+              onClick={() => props.deletePalette(id)}></i>
           </section>
         </div>
-      </article>
+      </article>;
 
-    return (
-      <section>
-        {(id) &&  allProjects}
-      </section>
-    );   
+  return (
+    <section>
+      {(id) &&  allProjects}
+    </section>
+  );   
 };
 
 export default Project;
