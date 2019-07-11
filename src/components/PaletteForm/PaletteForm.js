@@ -30,7 +30,7 @@ class PaletteForm extends Component {
     }
   }
 
-  editPaletteTitle = (event) => {
+  editPaletteTitle = () => {
     const { edit, paletteToEdit} = this.props;
 
     if (edit) {
@@ -44,7 +44,7 @@ class PaletteForm extends Component {
       <form className="color-form"
         onSubmit={this.handleSubmit}
         value={palette_title}
-        onMouseEnter={e => this.editPaletteTitle(e)}
+        onMouseEnter={() => this.editPaletteTitle()}
       >
         <select>
           <option defaultValue value=''>Create Project</option>

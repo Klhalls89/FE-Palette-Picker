@@ -21,7 +21,7 @@ class App extends Component {
       projects: [],
       folder: {},
       allPalettes: [],
-      paletteToEdit: {},
+      folderToEdit: {},
       edit: false
     }; 
   }
@@ -55,7 +55,7 @@ class App extends Component {
     let color5 = {color: `#${matchingPalette.color_5}`, isLocked: true};
     
     let newColors = [color1, color2, color3, color4, color5];
-    this.setState({colors: newColors, paletteToEdit: matchingPalette, edit: !edit});
+    this.setState({colors: newColors, folderToEdit: matchingPalette, edit: !edit});
    
 
   }
@@ -124,9 +124,9 @@ class App extends Component {
     }
   }
 
-
   render() {
-    const { colors, projects, allPalettes, paletteToEdit, edit } = this.state;
+    const { colors, projects, allPalettes, folderToEdit, edit } = this.state;
+    
     return (
       <div className="App">
         <h1 className="logo">Gen Hex</h1>
@@ -166,13 +166,16 @@ class App extends Component {
           Generate Colors
         </button>
         { projects.length && <PaletteForm 
-          paletteToEdit={paletteToEdit}
+          paletteToEdit={folderToEdit}
           edit={edit}
-          projects={this.state.projects} 
+          projects={projects} 
           handleProject={this.handleProject}/>
         }
         <SubmitProject
-          handleProject={this.handleProject}/>
+          folderToEdit={folderToEdit}
+          handleProject={this.handleProject}
+          projects={projects}
+          edit={edit}/>
         { allPalettes.length > 0 && 
           <ProjectsContainer projects={projects} 
             allPalettes={allPalettes} editPalette={this.editPalette}/>

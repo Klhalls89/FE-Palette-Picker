@@ -30,7 +30,7 @@ const Project = (props) => {
             <div style={{backgroundColor: `#${color_5}`}} 
               className="saved-colors5">
             </div>
-            <i class="far fa-edit" onClick={() => props.editPalette(id)}></i>
+            <i className="far fa-edit" onClick={() => props.editPalette(id)}></i>
             <i  className="fas fa-trash-alt" 
               onClick={() => props.deletePalette(id)}></i>
           </section>
