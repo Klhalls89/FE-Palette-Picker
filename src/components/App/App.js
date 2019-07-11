@@ -21,7 +21,8 @@ class App extends Component {
       projects: [],
       folder: {},
       allPalettes: [],
-      editMode: false
+      paletteToEdit: {},
+      edit: false
     }; 
   }
 
@@ -42,19 +43,19 @@ class App extends Component {
   }
 
   editPalette = (id) => {
-    let { allPalettes, editMode } = this.state;
+    let { allPalettes, edit } = this.state;
     const matchingPalette = allPalettes.find(palette => {
-      return palette.id === id
-    }) 
+      return palette.id === id;
+    }); 
    
-    let color1 = {color:`#${matchingPalette.color_1}`,isLocked: true}
-    let color2 = {color:`#${matchingPalette.color_2}`,isLocked: true}
-    let color3 = {color:`#${matchingPalette.color_3}`,isLocked: true}
-    let color4 = {color:`#${matchingPalette.color_4}`,isLocked: true}
-    let color5 = {color:`#${matchingPalette.color_5}`,isLocked: true}
+    let color1 = {color: `#${matchingPalette.color_1}`, isLocked: true};
+    let color2 = {color: `#${matchingPalette.color_2}`, isLocked: true};
+    let color3 = {color: `#${matchingPalette.color_3}`, isLocked: true};
+    let color4 = {color: `#${matchingPalette.color_4}`, isLocked: true};
+    let color5 = {color: `#${matchingPalette.color_5}`, isLocked: true};
     
     let newColors = [color1, color2, color3, color4, color5];
-    this.setState({colors: newColors, editMode: !editMode});
+    this.setState({colors: newColors, paletteToEdit: matchingPalette, edit: !edit});
    
 
   }
@@ -125,7 +126,7 @@ class App extends Component {
 
 
   render() {
-    const { colors, projects, allPalettes } = this.state;
+    const { colors, projects, allPalettes, paletteToEdit, edit } = this.state;
     return (
       <div className="App">
         <h1 className="logo">Gen Hex</h1>
@@ -165,6 +166,8 @@ class App extends Component {
           Generate Colors
         </button>
         { projects.length && <PaletteForm 
+          paletteToEdit={paletteToEdit}
+          edit={edit}
           projects={this.state.projects} 
           handleProject={this.handleProject}/>
         }

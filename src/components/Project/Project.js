@@ -7,6 +7,8 @@ const Project = (props) => {
       <article className="project-area">
         <h2 className="proj-name">
           {props.project_title}
+          <i className="fas fa-times">
+          </i>
         </h2>
         <div className="saved-palette-disp" >
           <h3 className="pal-name">
