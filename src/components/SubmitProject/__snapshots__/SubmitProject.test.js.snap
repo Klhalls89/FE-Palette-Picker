@@ -1,11 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SubmitProject should match the snapshot 1`] = `
+exports[`SubmitProjects Projects component should match the snapshot 1`] = `
 <div
   className="projects"
 >
   <form
     className="project-form"
+    onMouseEnter={[Function]}
     onSubmit={[Function]}
   >
     <input
@@ -16,7 +17,9 @@ exports[`SubmitProject should match the snapshot 1`] = `
       type="text"
       value=""
     />
-    <button>
+    <button
+      className="submit-btn"
+    >
       Submit
     </button>
   </form>

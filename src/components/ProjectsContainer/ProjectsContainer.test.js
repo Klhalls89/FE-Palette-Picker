@@ -14,15 +14,15 @@ describe('Projects Containers', () => {
   let mockRemovePalette;
 
   beforeEach(() => {
-    mockEditPalette = jest.fn()
-    mockRemovePalette = jest.fn()
-    mockProjects = [{title: 'project one'}, {title: 'project two'}]
-    mockAllPalettes = [{color:'123123'},{color:'123123'}]
+    mockEditPalette = jest.fn();
+    mockRemovePalette = jest.fn();
+    mockProjects = [{title: 'project one'}, {title: 'project two'}];
+    mockAllPalettes = [{color: '123123'}, {color: '123123'}];
 
     wrapper = shallow(<ProjectsContainer editPalette={mockEditPalette} 
-                                          projects={mockProjects} 
-                                          allPalettes={mockAllPalettes}  
-                                          removePalette={mockRemovePalette}/>)
+      projects={mockProjects} 
+      allPalettes={mockAllPalettes}  
+      removePalette={mockRemovePalette}/>);
   });
 
   it('Projects component should match the snapshot', () => {

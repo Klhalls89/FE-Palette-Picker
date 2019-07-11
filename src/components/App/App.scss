@@ -27,6 +27,15 @@
     width: 300px;
   }
 }
+.fas {
+  font-size: 26px;
+  padding-bottom: 15px;
+    &:hover {
+      color: #f7f7f7;
+      transform: scale(1.2);
+      cursor: pointer;
+    }
+}
 
 
 select,

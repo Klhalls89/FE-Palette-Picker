@@ -1,5 +1,205 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`App should call makeColors when clicked 1`] = `
+<div
+  className="App"
+>
+  <h1
+    className="logo"
+  >
+    Gen Hex
+  </h1>
+  <section
+    className="main-colors"
+  >
+    <div
+      className="color-1"
+      style={
+        Object {
+          "backgroundColor": "",
+        }
+      }
+    >
+      <p />
+      <i
+        className="fas fa-lock"
+        id="first-color"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="color-2"
+      style={
+        Object {
+          "backgroundColor": "",
+        }
+      }
+    >
+      <p />
+      <i
+        className="fas fa-lock"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="color-3"
+      style={
+        Object {
+          "backgroundColor": "",
+        }
+      }
+    >
+      <p />
+      <i
+        className="fas fa-lock"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="color-4"
+      style={
+        Object {
+          "backgroundColor": "",
+        }
+      }
+    >
+      <p />
+      <i
+        className="fas fa-lock"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="color-5"
+      style={
+        Object {
+          "backgroundColor": "",
+        }
+      }
+    >
+      <p />
+      <i
+        className="fas fa-lock"
+        onClick={[Function]}
+      />
+    </div>
+  </section>
+  <button
+    id="gen-colors"
+    onClick={[Function]}
+  >
+    Generate Colors
+  </button>
+  0
+  <SubmitProject
+    edit={false}
+    folderToEdit={Object {}}
+    handleProject={[Function]}
+    projects={Array []}
+  />
+</div>
+`;
+
+exports[`App should call render no colors when colors are empty 1`] = `
+<div
+  className="App"
+>
+  <h1
+    className="logo"
+  >
+    Gen Hex
+  </h1>
+  <section
+    className="main-colors"
+  >
+    <div
+      className="color-1"
+      style={
+        Object {
+          "backgroundColor": "",
+        }
+      }
+    >
+      <p />
+      <i
+        className="fas fa-unlock"
+        id="first-color"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="color-2"
+      style={
+        Object {
+          "backgroundColor": "",
+        }
+      }
+    >
+      <p />
+      <i
+        className="fas fa-unlock"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="color-3"
+      style={
+        Object {
+          "backgroundColor": "",
+        }
+      }
+    >
+      <p />
+      <i
+        className="fas fa-unlock"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="color-4"
+      style={
+        Object {
+          "backgroundColor": "",
+        }
+      }
+    >
+      <p />
+      <i
+        className="fas fa-unlock"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="color-5"
+      style={
+        Object {
+          "backgroundColor": "",
+        }
+      }
+    >
+      <p />
+      <i
+        className="fas fa-unlock"
+        onClick={[Function]}
+      />
+    </div>
+  </section>
+  <button
+    id="gen-colors"
+    onClick={[Function]}
+  >
+    Generate Colors
+  </button>
+  0
+  <SubmitProject
+    edit={false}
+    folderToEdit={Object {}}
+    handleProject={[Function]}
+    projects={Array []}
+  />
+</div>
+`;
+
 exports[`App should match the snapshot 1`] = `
 <div
   className="App"
@@ -16,12 +216,12 @@ exports[`App should match the snapshot 1`] = `
       className="color-1"
       style={
         Object {
-          "backgroundColor": "#E8BD91",
+          "backgroundColor": "#238EF0",
         }
       }
     >
       <p>
-        #E8BD91
+        #238EF0
       </p>
       <i
         className="fas fa-unlock"
@@ -32,12 +232,12 @@ exports[`App should match the snapshot 1`] = `
       className="color-2"
       style={
         Object {
-          "backgroundColor": "#2F4D36",
+          "backgroundColor": "#8D5EBC",
         }
       }
     >
       <p>
-        #2F4D36
+        #8D5EBC
       </p>
       <i
         className="fas fa-unlock"
@@ -48,12 +248,12 @@ exports[`App should match the snapshot 1`] = `
       className="color-3"
       style={
         Object {
-          "backgroundColor": "#B8AE14",
+          "backgroundColor": "#4DBA7F",
         }
       }
     >
       <p>
-        #B8AE14
+        #4DBA7F
       </p>
       <i
         className="fas fa-unlock"
@@ -64,12 +264,12 @@ exports[`App should match the snapshot 1`] = `
       className="color-4"
       style={
         Object {
-          "backgroundColor": "#F29A67",
+          "backgroundColor": "#86EDB0",
         }
       }
     >
       <p>
-        #F29A67
+        #86EDB0
       </p>
       <i
         className="fas fa-unlock"
@@ -80,12 +280,12 @@ exports[`App should match the snapshot 1`] = `
       className="color-5"
       style={
         Object {
-          "backgroundColor": "#329584",
+          "backgroundColor": "#32EF54",
         }
       }
     >
       <p>
-        #329584
+        #32EF54
       </p>
       <i
         className="fas fa-unlock"
@@ -94,14 +294,267 @@ exports[`App should match the snapshot 1`] = `
     </div>
   </section>
   <button
-    className="gen-colors"
+    id="gen-colors"
     onClick={[Function]}
   >
     Generate Colors
   </button>
   0
   <SubmitProject
+    edit={false}
+    folderToEdit={Object {}}
     handleProject={[Function]}
+    projects={Array []}
+  />
+</div>
+`;
+
+exports[`App should render PaletteForm 1`] = `
+<div
+  className="App"
+>
+  <h1
+    className="logo"
+  >
+    Gen Hex
+  </h1>
+  <section
+    className="main-colors"
+  >
+    <div
+      className="color-1"
+      style={
+        Object {
+          "backgroundColor": "#CF3490",
+        }
+      }
+    >
+      <p>
+        #CF3490
+      </p>
+      <i
+        className="fas fa-unlock"
+        id="first-color"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="color-2"
+      style={
+        Object {
+          "backgroundColor": "#E3DB80",
+        }
+      }
+    >
+      <p>
+        #E3DB80
+      </p>
+      <i
+        className="fas fa-unlock"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="color-3"
+      style={
+        Object {
+          "backgroundColor": "#E03246",
+        }
+      }
+    >
+      <p>
+        #E03246
+      </p>
+      <i
+        className="fas fa-unlock"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="color-4"
+      style={
+        Object {
+          "backgroundColor": "#36152D",
+        }
+      }
+    >
+      <p>
+        #36152D
+      </p>
+      <i
+        className="fas fa-unlock"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="color-5"
+      style={
+        Object {
+          "backgroundColor": "#E8312D",
+        }
+      }
+    >
+      <p>
+        #E8312D
+      </p>
+      <i
+        className="fas fa-unlock"
+        onClick={[Function]}
+      />
+    </div>
+  </section>
+  <button
+    id="gen-colors"
+    onClick={[Function]}
+  >
+    Generate Colors
+  </button>
+  <PaletteForm
+    edit={false}
+    handleProject={[Function]}
+    paletteToEdit={Object {}}
+    projects={
+      Array [
+        Object {
+          "id": 1,
+          "project_title": "Mellow",
+        },
+      ]
+    }
+  />
+  <SubmitProject
+    edit={false}
+    folderToEdit={Object {}}
+    handleProject={[Function]}
+    projects={
+      Array [
+        Object {
+          "id": 1,
+          "project_title": "Mellow",
+        },
+      ]
+    }
+  />
+</div>
+`;
+
+exports[`App should render ProjectsContainer 1`] = `
+<div
+  className="App"
+>
+  <h1
+    className="logo"
+  >
+    Gen Hex
+  </h1>
+  <section
+    className="main-colors"
+  >
+    <div
+      className="color-1"
+      style={
+        Object {
+          "backgroundColor": "#9C6527",
+        }
+      }
+    >
+      <p>
+        #9C6527
+      </p>
+      <i
+        className="fas fa-unlock"
+        id="first-color"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="color-2"
+      style={
+        Object {
+          "backgroundColor": "#3184D7",
+        }
+      }
+    >
+      <p>
+        #3184D7
+      </p>
+      <i
+        className="fas fa-unlock"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="color-3"
+      style={
+        Object {
+          "backgroundColor": "#E2F35C",
+        }
+      }
+    >
+      <p>
+        #E2F35C
+      </p>
+      <i
+        className="fas fa-unlock"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="color-4"
+      style={
+        Object {
+          "backgroundColor": "#6A9823",
+        }
+      }
+    >
+      <p>
+        #6A9823
+      </p>
+      <i
+        className="fas fa-unlock"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="color-5"
+      style={
+        Object {
+          "backgroundColor": "#8925A4",
+        }
+      }
+    >
+      <p>
+        #8925A4
+      </p>
+      <i
+        className="fas fa-unlock"
+        onClick={[Function]}
+      />
+    </div>
+  </section>
+  <button
+    id="gen-colors"
+    onClick={[Function]}
+  >
+    Generate Colors
+  </button>
+  0
+  <SubmitProject
+    edit={false}
+    folderToEdit={Object {}}
+    handleProject={[Function]}
+    projects={Array []}
+  />
+  <ProjectsContainer
+    allPalettes={
+      Array [
+        Object {
+          "color": "#83475",
+        },
+      ]
+    }
+    editPalette={[Function]}
+    projects={Array []}
   />
 </div>
 `;
