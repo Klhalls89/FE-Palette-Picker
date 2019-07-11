@@ -28,7 +28,10 @@ class SubmitProject extends Component {
     } else {
       updateProject({project_title}, editId);
     }
-    this.setState({project_title: ''});
+    this.setState({
+      project_title: '',
+      editId: null
+    });
   }
   
   editProjectTitle = () => {

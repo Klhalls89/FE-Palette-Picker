@@ -108,11 +108,11 @@ class App extends Component {
   }
 
   handleProject = (section, name) => {
-    const {colors } = this.state;
+    const { colors, folder, edit } = this.state;
     let preFolder = {};
 
-    if (section === 'project') {
-      const postFolder = {...this.state.folder, project_title: name};
+    if (section === 'project' && edit !== true) {
+      const postFolder = {...folder, project_title: name};
       newFolder(postFolder);
     } else {
       for (let i = 1; i < colors.length + 1; i++) {
