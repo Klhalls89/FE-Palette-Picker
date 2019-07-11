@@ -21,10 +21,16 @@ describe('App', () => {
     });
     
     it('should call getProjects', () => {
-      let mockFn = jest.spyOn(wrapper.instance(), 'getProjects') ;
+      let mockFn = jest.spyOn(wrapper.instance(), 'getProjects');
       wrapper.instance().componentDidMount();
       expect(mockFn).toHaveBeenCalled();
     });
+
+    it('should call getPalettes', () => {
+      let mockFn = jest.spyOn(wrapper.instance(), 'getPalettes');
+      wrapper.instance().componentDidMount();
+      expect(mockFn).toHaveBeenCalled()
+    })
   });
 
   describe('makeColors', () => {

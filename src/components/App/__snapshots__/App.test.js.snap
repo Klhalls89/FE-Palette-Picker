@@ -16,12 +16,12 @@ exports[`App should match the snapshot 1`] = `
       className="color-1"
       style={
         Object {
-          "backgroundColor": "#9E86CD",
+          "backgroundColor": "#2FEB7C",
         }
       }
     >
       <p>
-        #9E86CD
+        #2FEB7C
       </p>
       <i
         className="fas fa-unlock"
@@ -32,12 +32,12 @@ exports[`App should match the snapshot 1`] = `
       className="color-2"
       style={
         Object {
-          "backgroundColor": "#F234C1",
+          "backgroundColor": "#E84316",
         }
       }
     >
       <p>
-        #F234C1
+        #E84316
       </p>
       <i
         className="fas fa-unlock"
@@ -48,12 +48,12 @@ exports[`App should match the snapshot 1`] = `
       className="color-3"
       style={
         Object {
-          "backgroundColor": "#48CB69",
+          "backgroundColor": "#83D2B6",
         }
       }
     >
       <p>
-        #48CB69
+        #83D2B6
       </p>
       <i
         className="fas fa-unlock"
@@ -64,12 +64,12 @@ exports[`App should match the snapshot 1`] = `
       className="color-4"
       style={
         Object {
-          "backgroundColor": "#024B35",
+          "backgroundColor": "#09C524",
         }
       }
     >
       <p>
-        #024B35
+        #09C524
       </p>
       <i
         className="fas fa-unlock"
@@ -80,12 +80,12 @@ exports[`App should match the snapshot 1`] = `
       className="color-5"
       style={
         Object {
-          "backgroundColor": "#83CA51",
+          "backgroundColor": "#E031B5",
         }
       }
     >
       <p>
-        #83CA51
+        #E031B5
       </p>
       <i
         className="fas fa-unlock"
@@ -94,14 +94,17 @@ exports[`App should match the snapshot 1`] = `
     </div>
   </section>
   <button
-    className="gen-colors"
+    id="gen-colors"
     onClick={[Function]}
   >
     Generate Colors
   </button>
   0
   <SubmitProject
+    edit={false}
+    folderToEdit={Object {}}
     handleProject={[Function]}
+    projects={Array []}
   />
 </div>
 `;
