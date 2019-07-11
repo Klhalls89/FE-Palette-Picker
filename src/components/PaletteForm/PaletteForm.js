@@ -17,15 +17,15 @@ class PaletteForm extends Component {
   };
     
   handleChange = e => {
-    const { value } = e.target;
-    this.setState({palette_title: value});
+    const { value, name } = e.target;
+    this.setState({[name]: value});
   };
 
   options = () => {
     const {projects} = this.props;
     if (projects.length > 0) {
       return  projects.map(prop => {
-        return <option key={shortid.generate()}>{prop.project_title}</option>;
+        return <option key={shortid.generate()} value={`${prop.project_title}`}>{prop.project_title}</option>;
       });
     }
   }
@@ -38,11 +38,13 @@ class PaletteForm extends Component {
         value={palette_title}
       >
         <select>
+          <option defaultValue value=''>Create Project</option>
           {this.options()}
         </select>
         <input 
           className='title-input'
           type="text"
+          name="palette_title"
           onChange={this.handleChange}
           value={palette_title}
           placeholder='Enter Palette Name'
