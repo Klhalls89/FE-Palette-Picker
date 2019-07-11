@@ -28,6 +28,7 @@
   }
 }
 
+
 select,
 input {
   width: 300px;
@@ -49,6 +50,13 @@ button {
   height: 40px;
   font-size: 18px;
   margin: 25px 0;
+}
+#gen-colors {
+  border: none;
+  &:hover {
+    background-color: #52f71f;
+    cursor: pointer;
+  }
 }
 
 

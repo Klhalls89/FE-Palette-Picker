@@ -59,7 +59,7 @@ class SubmitProject extends Component {
             value={this.state.project_title}
             placeholder='Enter Project Title'
           />
-          <button>Submit</button>
+          <button className="submit-btn">Submit</button>
         </form>
         <section className="saved-portion">
           <Project />

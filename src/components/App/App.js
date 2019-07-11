@@ -162,7 +162,7 @@ class App extends Component {
             </i>
           </div>
         </section>
-        <button onClick={() => this.makeColors()} className="gen-colors">
+        <button onClick={() => this.makeColors()} id="gen-colors">
           Generate Colors
         </button>
         { projects.length && <PaletteForm 
