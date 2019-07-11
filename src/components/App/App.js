@@ -45,8 +45,17 @@ class App extends Component {
     const matchingPalette = allPalettes.find(palette => {
       return palette.id === id
     }) 
-    console.log(matchingPalette)
+   
+    let color1 = {color:`#${matchingPalette.color_1}`,isLocked: true}
+    let color2 = {color:`#${matchingPalette.color_2}`,isLocked: true}
+    let color3 = {color:`#${matchingPalette.color_3}`,isLocked: true}
+    let color4 = {color:`#${matchingPalette.color_4}`,isLocked: true}
+    let color5 = {color:`#${matchingPalette.color_5}`,isLocked: true}
     
+    let newColors = [color1, color2, color3, color4, color5]
+    this.setState({colors: newColors})
+   
+
   }
 
   makeColors = () => {
