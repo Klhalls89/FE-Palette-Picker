@@ -15,6 +15,7 @@ class ProjectsContainer extends Component {
   displayProjects = () => {
     const { projects, allPalettes } = this.props;
     let combineInfo;
+    
     if (allPalettes !== undefined && allPalettes.length > 0) {
       combineInfo =  projects.reduce((acc, project) => {
         allPalettes.forEach(palette => {

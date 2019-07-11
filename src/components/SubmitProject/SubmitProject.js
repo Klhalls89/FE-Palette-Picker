@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import Project from '../Project/Project';
-import { newProject } from '../../Utility/ApiCalls';
+import { newProject, updateProject } from '../../Utility/ApiCalls';
 
 class SubmitProject extends Component {
   constructor() {
     super();
     this.state = {
-      projects: [],
-      project_title: ''
+      project_title: '',
+      editId: null
     };
   }
 
@@ -19,18 +19,39 @@ class SubmitProject extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    const {project_title} = this.state;
+    const { edit } = this.props;
+    const {project_title, editId} = this.state;
 
-    newProject({project_title});
-    this.props.handleProject('project', project_title);
-    this.setState({project_title: ''});
+    if (!edit) {
+      newProject({project_title});
+      this.props.handleProject('project', project_title);
+    } else {
+      updateProject({project_title}, editId);
+    }
+    this.setState({
+      project_title: '',
+      editId: null
+    });
+  }
+  
+  editProjectTitle = () => {
+    const {projects, folderToEdit, edit} = this.props;
+    const foundProject = projects.find(project => project.id === folderToEdit.project_id);
+    if (edit) {
+      this.setState({
+        project_title: foundProject.project_title,
+        editId: foundProject.id
+      });
+    } 
   }
 
   render() {
 
     return (
       <div className="projects">
-        <form className="project-form" onSubmit={this.handleSubmit}>
+        <form className="project-form"
+          onMouseEnter={() => this.editProjectTitle()} 
+          onSubmit={this.handleSubmit}>
           <input type="text" 
             className="title-input" 
             onChange={this.handleChange}

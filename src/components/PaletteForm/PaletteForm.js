@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-const shortid = require('shortid')
+const shortid = require('shortid');
 
 class PaletteForm extends Component {
   constructor() {
@@ -29,6 +29,14 @@ class PaletteForm extends Component {
       });
     }
   }
+
+  editPaletteTitle = () => {
+    const { edit, paletteToEdit} = this.props;
+
+    if (edit) {
+      this.setState({palette_title: paletteToEdit.palette_title});
+    } 
+  }
   
   render() {
     const { palette_title } = this.state;
@@ -36,6 +44,7 @@ class PaletteForm extends Component {
       <form className="color-form"
         onSubmit={this.handleSubmit}
         value={palette_title}
+        onMouseEnter={() => this.editPaletteTitle()}
       >
         <select>
           <option defaultValue value=''>Create Project</option>
@@ -56,3 +65,4 @@ class PaletteForm extends Component {
 }
 
 export default PaletteForm;
+
