@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Project from '../Project/Project';
-import { removePalete } from '../../Utility/ApiCalls';
+import { removePalette } from '../../Utility/ApiCalls';
 const shortid = require('shortid');
 
 class ProjectsContainer extends Component {
@@ -9,7 +9,7 @@ class ProjectsContainer extends Component {
   }
 
    deletePalette = (id) => {
-     removePalete(id);
+     removePalette(id);
    }
 
   displayProjects = () => {

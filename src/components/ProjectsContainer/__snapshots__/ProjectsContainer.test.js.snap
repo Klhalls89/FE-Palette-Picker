@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Projects Containers Projects component should match the snapshot 1`] = `
+<div
+  className="projects"
+>
+  <section
+    className="saved-portion"
+  >
+    <Project
+      color="123123"
+      deletePalette={[Function]}
+      editPalette={[MockFunction]}
+      key="7nSOWcDTz"
+      title="project one"
+    />
+    <Project
+      color="123123"
+      deletePalette={[Function]}
+      editPalette={[MockFunction]}
+      key="ubrYjlBp3z"
+      title="project one"
+    />
+    <Project
+      color="123123"
+      deletePalette={[Function]}
+      editPalette={[MockFunction]}
+      key="7t55OyZni7"
+      title="project two"
+    />
+    <Project
+      color="123123"
+      deletePalette={[Function]}
+      editPalette={[MockFunction]}
+      key="-NSNnlTXXr"
+      title="project two"
+    />
+  </section>
+</div>
+`;
