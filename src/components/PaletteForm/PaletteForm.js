@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+const shortid = require('shortid')
 
 class PaletteForm extends Component {
   constructor() {
@@ -24,7 +25,7 @@ class PaletteForm extends Component {
     const {projects} = this.props;
     if (projects.length > 0) {
       return  projects.map(prop => {
-        return <option key={Date.now()}>{prop.project_title}</option>;
+        return <option key={shortid.generate()}>{prop.project_title}</option>;
       });
     }
   }
