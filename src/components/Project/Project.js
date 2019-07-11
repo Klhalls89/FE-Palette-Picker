@@ -8,7 +8,7 @@ const Project = (props) => {
         <h2 className="proj-name">
           {props.project_title}
         </h2>
-        <div className="saved-palette-disp" onClick={() => props.editPalette(id)}>
+        <div className="saved-palette-disp" >
           <h3 className="pal-name">
             {props.palette_title}
           </h3>
@@ -28,6 +28,7 @@ const Project = (props) => {
             <div style={{backgroundColor: `#${color_5}`}} 
               className="saved-color5">
             </div>
+            <i class="far fa-edit" onClick={() => props.editPalette(id)}></i>
             <i  className="fas fa-trash-alt" onClick={() => props.deletePalette(id)}></i>
           </section>
         </div>
