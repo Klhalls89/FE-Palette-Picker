@@ -1,6 +1,6 @@
 import React from 'react';
 import App from './App';
-import {shallow } from 'enzyme'
+import { shallow } from 'enzyme'
 
 describe('App', () => {
   let wrapper;
@@ -13,18 +13,18 @@ describe('App', () => {
   })
 
   describe('componentDidMount', () => {
-    it.skip('should call makeColors', () => {
+    it('should call makeColors', () => {
       const makeColors = jest.fn()
       expect(makeColors).toHaveBeenCalledTimes(1)
     })
-    it.skip('should call getProjects', () => {
+    it('should call getProjects', () => {
       let getProjects = jest.fn()
       expect(getProjects).toHaveBeenCalledTimes(1)
     })
   })
 
   describe('makeColors', () => {
-    it.skip('should call genHex the passed amount of times', () => {
+    it('should call genHex the passed amount of times', () => {
       //setup
       const genHex = jest.fn()
       wrapper.instance.makeColors()

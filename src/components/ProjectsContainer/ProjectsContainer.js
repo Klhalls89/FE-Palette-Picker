@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Project from '../Project/Project';
-import { removePalete } from '../../Utility/ApiCalls';
+import { removePalette } from '../../Utility/ApiCalls';
 
 class ProjectsContainer extends Component {
   constructor(props) {
@@ -8,7 +8,7 @@ class ProjectsContainer extends Component {
   }
 
    deletePalette = (id) => {
-    removePalete(id);
+    removePalette(id);
   }
 
   displayProjects = () => {
