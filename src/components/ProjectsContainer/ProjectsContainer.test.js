@@ -31,7 +31,7 @@ describe('Projects Containers', () => {
 
   describe('deletePalette', () => {
     it.skip('deletePalette should call removePalette', () => {
-      // let mockFn = jest.spyOn(wrapper.instance(), 'removePalette');
+      let mockFn = jest.spyOn(wrapper.instance(), 'removePalette');
       wrapper.instance().deletePalette(); 
       expect(mockRemovePalette).toHaveBeenCalled();
     });

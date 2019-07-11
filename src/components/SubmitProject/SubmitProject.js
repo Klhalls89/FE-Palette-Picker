@@ -12,12 +12,13 @@ class SubmitProject extends Component {
   }
 
   handleChange = (event) => {
+    console.log('handleChange', event.target)
     const { value } = event.target;
     this.setState({project_title: value});
   }
 
-
   handleSubmit = (event) => {
+
     event.preventDefault();
     const { edit } = this.props;
     const {project_title, editId} = this.state;

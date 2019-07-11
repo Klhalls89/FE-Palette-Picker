@@ -11,4 +11,4 @@ describe('Projects', () => {
   it('Projects component should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot()
   });
-})
+});

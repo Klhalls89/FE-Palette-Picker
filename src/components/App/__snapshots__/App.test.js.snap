@@ -16,12 +16,12 @@ exports[`App should match the snapshot 1`] = `
       className="color-1"
       style={
         Object {
-          "backgroundColor": "#9E86CD",
+          "backgroundColor": "#E8BD91",
         }
       }
     >
       <p>
-        #9E86CD
+        #E8BD91
       </p>
       <i
         className="fas fa-unlock"
@@ -32,12 +32,12 @@ exports[`App should match the snapshot 1`] = `
       className="color-2"
       style={
         Object {
-          "backgroundColor": "#F234C1",
+          "backgroundColor": "#2F4D36",
         }
       }
     >
       <p>
-        #F234C1
+        #2F4D36
       </p>
       <i
         className="fas fa-unlock"
@@ -48,12 +48,12 @@ exports[`App should match the snapshot 1`] = `
       className="color-3"
       style={
         Object {
-          "backgroundColor": "#48CB69",
+          "backgroundColor": "#B8AE14",
         }
       }
     >
       <p>
-        #48CB69
+        #B8AE14
       </p>
       <i
         className="fas fa-unlock"
@@ -64,12 +64,12 @@ exports[`App should match the snapshot 1`] = `
       className="color-4"
       style={
         Object {
-          "backgroundColor": "#024B35",
+          "backgroundColor": "#F29A67",
         }
       }
     >
       <p>
-        #024B35
+        #F29A67
       </p>
       <i
         className="fas fa-unlock"
@@ -80,12 +80,12 @@ exports[`App should match the snapshot 1`] = `
       className="color-5"
       style={
         Object {
-          "backgroundColor": "#83CA51",
+          "backgroundColor": "#329584",
         }
       }
     >
       <p>
-        #83CA51
+        #329584
       </p>
       <i
         className="fas fa-unlock"
