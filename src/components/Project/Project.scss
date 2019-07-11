@@ -13,7 +13,31 @@
       h3 {
         font-family: $accent-font;
       }
-
+      .saved-color1:hover {
+        transform: scale(1.2)
+      }
+      .saved-color2:hover {
+        transform: scale(1.2)
+      }
+      .saved-color3:hover {
+        transform: scale(1.2)
+      }
+      .saved-color4:hover {
+        transform: scale(1.2)
+      }
+      .saved-color5:hover {
+        transform: scale(1.2)
+      }
+      .far {
+        margin: 5px;
+        font-size: 38px;
+        padding: 0px 10px;
+        margin: auto;
+        &:hover {
+          color: grey;
+          transform: scale(1.2)
+        }
+      }
       .fas {
         margin: 5px;
         font-size: 36px;
@@ -21,6 +45,7 @@
         margin: auto;
         &:hover {
           color: grey;
+          transform: scale(1.2)
         }
       }
     }

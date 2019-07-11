@@ -2,8 +2,8 @@ import React from 'react';
 
 const Project = (props) => {
 
-    const { id, color_1, color_2, color_3, color_4, color_5 } = props;
-    const allProjects = 
+  const { id, color_1, color_2, color_3, color_4, color_5 } = props;
+  const allProjects = 
       <article className="project-area">
         <h2 className="proj-name">
           {props.project_title}
@@ -29,16 +29,17 @@ const Project = (props) => {
               className="saved-color5">
             </div>
             <i class="far fa-edit" onClick={() => props.editPalette(id)}></i>
-            <i  className="fas fa-trash-alt" onClick={() => props.deletePalette(id)}></i>
+            <i  className="fas fa-trash-alt" 
+              onClick={() => props.deletePalette(id)}></i>
           </section>
         </div>
-      </article>
+      </article>;
 
-    return (
-      <section>
-        {(id) &&  allProjects}
-      </section>
-    );   
+  return (
+    <section>
+      {(id) &&  allProjects}
+    </section>
+  );   
 };
 
 export default Project;
