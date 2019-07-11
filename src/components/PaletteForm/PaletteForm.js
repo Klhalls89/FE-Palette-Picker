@@ -34,7 +34,7 @@ class PaletteForm extends Component {
     const { edit, paletteToEdit} = this.props;
 
     if (edit) {
-      this.setState({palette_title: paletteToEdit.palette_title})
+      this.setState({palette_title: paletteToEdit.palette_title});
     } 
   }
   
@@ -44,6 +44,7 @@ class PaletteForm extends Component {
       <form className="color-form"
         onSubmit={this.handleSubmit}
         value={palette_title}
+        onMouseEnter={e => this.editPaletteTitle(e)}
       >
         <select>
           <option defaultValue value=''>Create Project</option>
@@ -54,7 +55,6 @@ class PaletteForm extends Component {
           type="text"
           name="palette_title"
           onChange={this.handleChange}
-          onClick={e => this.editPaletteTitle(e)}
           value={palette_title}
           placeholder='Enter Palette Name'
         />
