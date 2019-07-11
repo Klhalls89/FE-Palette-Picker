@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Project from '../Project/Project';
 import { removePalette } from '../../Utility/ApiCalls';
+const shortid = require('shortid');
 
 class ProjectsContainer extends Component {
   constructor(props) {
@@ -8,8 +9,8 @@ class ProjectsContainer extends Component {
   }
 
    deletePalette = (id) => {
-    removePalette(id);
-  }
+     removePalete(id);
+   }
 
   displayProjects = () => {
     const { projects, allPalettes } = this.props;
@@ -27,7 +28,7 @@ class ProjectsContainer extends Component {
     }
 
     let allHistory = combineInfo.map(info => {
-      return <Project deletePalette={this.deletePalette} editPalette={this.props.editPalette} key={info.id} {...info}/>;
+      return <Project deletePalette={this.deletePalette} editPalette={this.props.editPalette} key={shortid.generate()} {...info}/>;
     });
     return allHistory;
   }
@@ -40,7 +41,7 @@ class ProjectsContainer extends Component {
         </section>
       </div>
     );
-  };
+  }
 };
 
 export default ProjectsContainer;
