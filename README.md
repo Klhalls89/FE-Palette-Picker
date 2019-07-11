@@ -40,8 +40,7 @@ An exciting new app that generate colors and allows you to customize palettes fo
 <img width="509" alt="Screen Shot 2019-07-05 at 8 04 29 PM" src="https://user-images.githubusercontent.com/41968928/60750050-3c5e4a80-9f60-11e9-876a-690cc915e85a.png">
 
 ## The Product 
-![genhex](https://user-images.githubusercontent.com/41968928/61058267-1bf51c80-a3b4-11e9-899d-8c2abf20189d.jpg)
-
+![genhex](https://user-images.githubusercontent.com/41968928/61058931-662acd80-a3b5-11e9-9686-d649e2bc709c.jpg)
 
 ## Contributors
 Kristen Hallstrom
