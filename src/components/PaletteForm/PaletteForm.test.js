@@ -1,14 +1,29 @@
 import React from 'react';
+import PaletteForm from './PaletteForm.js'
 import { shallow } from 'enzyme';
-import PaletteForm from './PaletteForm';
+const shortid = require('shortid')
 
-describe('PaletteForms', () => {
+
+describe('PaletteForm', () => {
   let wrapper;
+  let mockProjects;
+  let mockHandleProject;
 
   beforeEach(() => {
-    wrapper = shallow(<PaletteForm />);
+    let mockHandleProject = jest.fn()
+     mockProjects = [{project_title: 'project one'}]
+    wrapper = shallow(<PaletteForm projects={mockProjects} 
+                                  handleProject={mockHandleProject}/>)
   });
-  it('PaletteForms component should match the snapshot', () => {
-    expect(wrapper).toMatchSnapshot();
+
+  it('should match the snapshot', () => {
+    expect(wrapper).toMatchSnapshot()
+  });
+
+  describe('options', () => {
+    it('should return an array of options', () => {
+      wrapper.instance().options()
+      expect.arrayContaining(<option></option>)
+    });
   });
 });
