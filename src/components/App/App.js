@@ -1,5 +1,3 @@
-/* eslint-disable no-console */
-/* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
 import ProjectsContainer from '../ProjectsContainer/ProjectsContainer';
 import SubmitProject from '../SubmitProject/SubmitProject';
@@ -175,7 +173,7 @@ class App extends Component {
         } 
       </div>
     );
-  }
-}
+  };
+};
 
 export default App;

@@ -38,8 +38,11 @@ describe('App', () => {
 
   describe('genHex', () => {
     it('should output a hex value when called', () => {
+     const result = wrapper.instance().genHex()
+      expect.stringContaining('#')
     });
   });
+
 });
 
 
