@@ -1,13 +1,24 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import ProjectsContainer from './ProjectsContainer';
+import ProjectsContainer from './ProjectsContainer.js';
+import Project from '../Project/Project.js'; 
 import { removePalette } from '../../Utility/ApiCalls';
+import { shallow } from 'enzyme';
+
+let shortid = require('shortid');
 
 describe('Projects Containers', () => {
   let wrapper;
-
+  let mockEditPalette;
+  let mockProjects;
+  let mockAllPalettes;
   beforeEach(() => {
-    wrapper = shallow(<ProjectsContainer />)
+    mockEditPalette = jest.fn()
+    mockProjects = [{title: 'project one'}, {title: 'project two'}]
+    mockAllPalettes = [{color:'123123'},{color:'123123'}]
+
+    wrapper = shallow(<ProjectsContainer editPalette={mockEditPalette} 
+                                          projects={mockProjects} 
+                                          allPalettes={mockAllPalettes}  />)
   });
 
   it('Projects component should match the snapshot', () => {
@@ -15,10 +26,10 @@ describe('Projects Containers', () => {
   });
 
   describe('deletePalette', () => {
-    it.only('deletePalette should call removePalette from apiCall', () => {
+    it.only('deletePalette should call removePalette', () => {
       const removePalette = jest.fn();
-      wrapper.instance.deletePalette();
-      expect(removePalette).toHaveBeenCalledTimes(1);
+      wrapper.instance().deletePalette();
+      expect(removePalette).toHaveBeenCalled();
     });
   });
 });

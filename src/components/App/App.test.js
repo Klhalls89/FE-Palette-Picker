@@ -5,7 +5,7 @@ import { shallow } from 'enzyme'
 describe('App', () => {
   let wrapper;
   beforeEach(() => {
-    wrapper = shallow(<App/>)
+    wrapper = shallow(<App />)
   })
 
   it('should match the snapshot', () => {
@@ -27,7 +27,7 @@ describe('App', () => {
     it('should call genHex the passed amount of times', () => {
       //setup
       const genHex = jest.fn()
-      wrapper.instance.makeColors()
+      wrapper.instance().makeColors()
       expect(genHex).toHaveBeenCalled()
     })
   })
