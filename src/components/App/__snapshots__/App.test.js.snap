@@ -7,7 +7,7 @@ exports[`App should match the snapshot 1`] = `
   <h1
     className="logo"
   >
-    Palette Picker
+    Gen Hex
   </h1>
   <section
     className="main-colors"
@@ -16,12 +16,12 @@ exports[`App should match the snapshot 1`] = `
       className="color-1"
       style={
         Object {
-          "backgroundColor": "#D5FEB6",
+          "backgroundColor": "#B29487",
         }
       }
     >
       <p>
-        #D5FEB6
+        #B29487
       </p>
       <i
         className="fas fa-unlock"
@@ -32,12 +32,12 @@ exports[`App should match the snapshot 1`] = `
       className="color-2"
       style={
         Object {
-          "backgroundColor": "#8E9347",
+          "backgroundColor": "#204691",
         }
       }
     >
       <p>
-        #8E9347
+        #204691
       </p>
       <i
         className="fas fa-unlock"
@@ -48,12 +48,12 @@ exports[`App should match the snapshot 1`] = `
       className="color-3"
       style={
         Object {
-          "backgroundColor": "#823471",
+          "backgroundColor": "#E20C15",
         }
       }
     >
       <p>
-        #823471
+        #E20C15
       </p>
       <i
         className="fas fa-unlock"
@@ -64,12 +64,12 @@ exports[`App should match the snapshot 1`] = `
       className="color-4"
       style={
         Object {
-          "backgroundColor": "#1DAFB4",
+          "backgroundColor": "#D83A4C",
         }
       }
     >
       <p>
-        #1DAFB4
+        #D83A4C
       </p>
       <i
         className="fas fa-unlock"
@@ -80,12 +80,12 @@ exports[`App should match the snapshot 1`] = `
       className="color-5"
       style={
         Object {
-          "backgroundColor": "#8E964F",
+          "backgroundColor": "#FD3C16",
         }
       }
     >
       <p>
-        #8E964F
+        #FD3C16
       </p>
       <i
         className="fas fa-unlock"
@@ -99,11 +99,8 @@ exports[`App should match the snapshot 1`] = `
   >
     Generate Colors
   </button>
-  <PaletteForm
-    handleProject={[Function]}
-    projects={Array []}
-  />
-  <ProjectsContainer
+  0
+  <SubmitProject
     handleProject={[Function]}
   />
 </div>

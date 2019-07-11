@@ -106,7 +106,7 @@ class App extends Component {
   }
 
   handleProject = (section, name) => {
-    const {colors } = this.state;
+    const { colors } = this.state;
     let preFolder = {};
 
     if (section === 'project') {
@@ -121,7 +121,6 @@ class App extends Component {
       this.setState({folder: preFolder});
     }
   }
-
 
   render() {
     const { colors, projects, allPalettes } = this.state;
