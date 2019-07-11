@@ -20,10 +20,10 @@ describe('PaletteForm', () => {
     expect(wrapper).toMatchSnapshot()
   });
 
-    describe('options', () => {
-      it('should return an array of options', () => {
-        wrapper.instance().options()
-        expect.arrayContaining(<option></option>)
-      });
+  describe('options', () => {
+    it('should return an array of options', () => {
+      wrapper.instance().options()
+      expect.arrayContaining(<option></option>)
     });
+  });
 });

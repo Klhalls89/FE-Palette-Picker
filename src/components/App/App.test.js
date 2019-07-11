@@ -42,7 +42,4 @@ describe('App', () => {
       expect.stringContaining('#')
     });
   });
-
 });
-
-

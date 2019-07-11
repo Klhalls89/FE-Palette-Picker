@@ -20,13 +20,13 @@ describe('SubmitProject', () => {
     expect(wrapper).toMatchSnapshot()
   });
 
-    describe('handleChange', () => {
-      it.skip('should set state with event change', () => {
-        mockEvent = <input value="k"/>
-        let event = mockEvent;
-        wrapper.instance().handleChange(event)
-        const state = wrapper.instance().state
-        expect(state.project_title).toBe('k')
-      });
+  describe('handleChange', () => {
+    it.skip('should set state with event change', () => {
+      mockEvent = <input value="k"/>
+      let event = mockEvent;
+      wrapper.instance().handleChange(event)
+      const state = wrapper.instance().state
+      expect(state.project_title).toBe('k')
     });
+  });
 });
