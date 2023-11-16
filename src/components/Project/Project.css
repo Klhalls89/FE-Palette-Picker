@@ -1,0 +1,67 @@
+.project-area {
+  text-align: center;
+}
+
+.proj-name {
+  text-align: center;
+}
+
+.saved-palette-disp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid #fff 3px;
+}
+
+.saved-palette-disp h3 {
+  font-family: 'Courgette', cursive;
+}
+
+.saved-color1:hover,
+.saved-color2:hover,
+.saved-color3:hover,
+.saved-color4:hover,
+.saved-colors5:hover {
+  transform: scale(1.2);
+}
+
+.far {
+  margin: 5px;
+  font-size: 38px;
+  padding: 0px 10px;
+  margin: auto;
+}
+
+.far:hover {
+  color: grey;
+  transform: scale(1.2);
+}
+
+.fas {
+  margin: 5px;
+  font-size: 36px;
+  padding-left: 17px;
+  margin: auto;
+}
+
+.fas:hover {
+  color: grey;
+  transform: scale(1.2);
+}
+
+.saved-colors {
+  grid-area: colors;
+  display: flex;
+}
+
+.saved-colors div {
+  background-color: pink;
+  height: 50px;
+  width: 50px;
+  margin: 5px;
+}
+
+.saved-palette-disp:hover {
+  border: solid #3C3C3C 3px;
+  cursor: pointer;
+}

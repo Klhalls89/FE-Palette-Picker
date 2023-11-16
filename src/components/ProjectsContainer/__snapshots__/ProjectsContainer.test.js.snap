@@ -11,28 +11,28 @@ exports[`Projects Containers Projects component should match the snapshot 1`] = 
       color="123123"
       deletePalette={[Function]}
       editPalette={[MockFunction]}
-      key="k0ZgXgypn"
+      key="RYELjqvnu"
       title="project one"
     />
     <Project
       color="123123"
       deletePalette={[Function]}
       editPalette={[MockFunction]}
-      key="ojvSJZQ9kR"
+      key="nFYcX1qMX8"
       title="project one"
     />
     <Project
       color="123123"
       deletePalette={[Function]}
       editPalette={[MockFunction]}
-      key="iZ7hys7aDQ"
+      key="UNrkjRXYfC"
       title="project two"
     />
     <Project
       color="123123"
       deletePalette={[Function]}
       editPalette={[MockFunction]}
-      key="z7icADVYpZ"
+      key="BDeS4s4lge"
       title="project two"
     />
   </section>

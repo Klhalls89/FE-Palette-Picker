@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './PaletteForm.css';
 const shortid = require('shortid');
 
 class PaletteForm extends Component {

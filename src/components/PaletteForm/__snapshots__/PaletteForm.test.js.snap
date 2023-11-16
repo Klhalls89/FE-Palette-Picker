@@ -3,6 +3,7 @@
 exports[`PaletteForm should match the snapshot 1`] = `
 <form
   className="color-form"
+  onMouseEnter={[Function]}
   onSubmit={[Function]}
   value=""
 >
@@ -14,7 +15,7 @@ exports[`PaletteForm should match the snapshot 1`] = `
       Create Project
     </option>
     <option
-      key="prZnx-nNZ"
+      key="Wk9YPOUo5"
       value="project one"
     >
       project one

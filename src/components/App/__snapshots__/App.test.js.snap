@@ -325,12 +325,12 @@ exports[`App should render PaletteForm 1`] = `
       className="color-1"
       style={
         Object {
-          "backgroundColor": "#CF3490",
+          "backgroundColor": "#A20BE8",
         }
       }
     >
       <p>
-        #CF3490
+        #A20BE8
       </p>
       <i
         className="fas fa-unlock"
@@ -342,12 +342,12 @@ exports[`App should render PaletteForm 1`] = `
       className="color-2"
       style={
         Object {
-          "backgroundColor": "#E3DB80",
+          "backgroundColor": "#E1A057",
         }
       }
     >
       <p>
-        #E3DB80
+        #E1A057
       </p>
       <i
         className="fas fa-unlock"
@@ -358,12 +358,12 @@ exports[`App should render PaletteForm 1`] = `
       className="color-3"
       style={
         Object {
-          "backgroundColor": "#E03246",
+          "backgroundColor": "#32F4ED",
         }
       }
     >
       <p>
-        #E03246
+        #32F4ED
       </p>
       <i
         className="fas fa-unlock"
@@ -374,12 +374,12 @@ exports[`App should render PaletteForm 1`] = `
       className="color-4"
       style={
         Object {
-          "backgroundColor": "#36152D",
+          "backgroundColor": "#82A96F",
         }
       }
     >
       <p>
-        #36152D
+        #82A96F
       </p>
       <i
         className="fas fa-unlock"
@@ -390,12 +390,12 @@ exports[`App should render PaletteForm 1`] = `
       className="color-5"
       style={
         Object {
-          "backgroundColor": "#E8312D",
+          "backgroundColor": "#9FB3E7",
         }
       }
     >
       <p>
-        #E8312D
+        #9FB3E7
       </p>
       <i
         className="fas fa-unlock"
@@ -454,12 +454,12 @@ exports[`App should render ProjectsContainer 1`] = `
       className="color-1"
       style={
         Object {
-          "backgroundColor": "#9C6527",
+          "backgroundColor": "#EF46B2",
         }
       }
     >
       <p>
-        #9C6527
+        #EF46B2
       </p>
       <i
         className="fas fa-unlock"
@@ -471,12 +471,12 @@ exports[`App should render ProjectsContainer 1`] = `
       className="color-2"
       style={
         Object {
-          "backgroundColor": "#3184D7",
+          "backgroundColor": "#846DEA",
         }
       }
     >
       <p>
-        #3184D7
+        #846DEA
       </p>
       <i
         className="fas fa-unlock"
@@ -487,12 +487,12 @@ exports[`App should render ProjectsContainer 1`] = `
       className="color-3"
       style={
         Object {
-          "backgroundColor": "#E2F35C",
+          "backgroundColor": "#B8A7D0",
         }
       }
     >
       <p>
-        #E2F35C
+        #B8A7D0
       </p>
       <i
         className="fas fa-unlock"
@@ -503,12 +503,12 @@ exports[`App should render ProjectsContainer 1`] = `
       className="color-4"
       style={
         Object {
-          "backgroundColor": "#6A9823",
+          "backgroundColor": "#2863BD",
         }
       }
     >
       <p>
-        #6A9823
+        #2863BD
       </p>
       <i
         className="fas fa-unlock"
@@ -519,12 +519,12 @@ exports[`App should render ProjectsContainer 1`] = `
       className="color-5"
       style={
         Object {
-          "backgroundColor": "#8925A4",
+          "backgroundColor": "#0EB643",
         }
       }
     >
       <p>
-        #8925A4
+        #0EB643
       </p>
       <i
         className="fas fa-unlock"

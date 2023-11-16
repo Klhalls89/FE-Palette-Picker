@@ -58,6 +58,7 @@ describe('App', () => {
     it('should call makeColors', () => {
       jest.spyOn(wrapper.instance(), 'makeColors');
       wrapper.instance().componentDidMount();
+      console.log(wrapper.instance())
       expect(wrapper.instance().makeColors).toHaveBeenCalled();
     });
     

@@ -1,0 +1,16 @@
+.color-form {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.title-input {
+  font-size: 16px;
+  padding-left: 5px;
+}
+
+.save-pal {
+  border: none;
+}
+
+.save-pal:hover {
+  cursor: pointer;
+}
