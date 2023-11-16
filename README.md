@@ -1,5 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 # Gen Hex
 
 ## Description
@@ -44,6 +42,6 @@ An exciting new app that generate colors and allows you to customize palettes fo
 
 ## Contributors
 Kristen Hallstrom
-Micheal King Stockton
+Michael King-Stockton
 
 
